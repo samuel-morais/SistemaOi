@@ -142,35 +142,6 @@
 <!--===============================================================================================-->
 	<script>
 
-	$(document).ready(function() {
-		$('.js-tilt').tilt({
-			scale: 1.2
-		});
-
-	
-		//MENSAGEM - CONFIGURAÇÃO DO TOASTR(POPUP -> NOTIFICAÇÃO)
-		function message(type, msg) {
-			if (msg) {
-			//CONFIG MENSAGEM
-			toastr.options = {
-				//"closeButton": true,
-				"closeButton": true,
-				"newestOnTop": true,
-				"progressBar": true,
-				"showDuration": "600",
-				"progressBar": true,
-				"hideDuration": "500",
-				"timeOut": "3000",
-				"extendedTimeOut": "1000",
-				"hideEasing": "linear",
-				"showMethod": "fadeIn",
-				"hideMethod": "fadeOut",
-				"positionClass": "toast-top-center",
-			}
-			}
-			//EXIBE MENSAGEM
-			Command:toastr[type]('<strong>'+msg+'</strong>');
-		}
 
 			$('#form-login').unbind('submit').submit(function(e) {
 				e.preventDefault();
@@ -197,7 +168,7 @@
 								window.location.href = "./views/template.php";
 							}
 							if (json.tipoUsuarioLogado == 'U') {
-								window.location.href = "./views/ViewFaq/faq.php";
+								window.location.href = "./views/ViewOi/form_oi.php";
 							}
 						} else {
 							return message('error', json.msg);
@@ -255,7 +226,6 @@
 			$('#cadastro').css('display', 'none');
 			$('#login').css('display', 'block');
 		});
-	});
 	</script>
 	<script src="js/main.js"></script>
 

@@ -57,8 +57,37 @@
                 </div>
                 <label for="msg">Circuitos:*</label>
                 <div class="form-group">
-                    <textarea rows="10" id="circuitos" name="circuitos" placeholder="Digite seu circuito"></textarea>
+                    <input type="text" name="" id="circuitos" name="circuitos" placeholder="Digite o circuito">
                 </div>
+                <label for="msg">Chave</label>
+                <div class="form-group">
+                    <input type="text" name="" id="chave" name="chave" placeholder="Digite a chave">
+                </div>
+                <label for="msg">Nome Logico</label>
+                <div class="form-group">
+                    <input type="text" name="" id="NomeLogico" name="NomeLogico" placeholder="Digite o número Lógico">
+                </div>
+                <label for="msg">Chave DDD</label>
+                <div class="form-group">
+                    <input type="text" name="" id="chaveddd" name="chaveddd" placeholder="Digite a chave">
+                </div>
+                <label for="msg">Chave Caixa</label>
+                <div class="form-group">
+                    <input type="text" name="" id="chavecaixa" name="chavecaixa" placeholder="Digite a chave Caixa">
+                </div>
+                <label for="msg">Contrato Caixa</label>
+                <div class="form-group">
+                    <input type="text" name="" id="contratocaixa" name="contratocaixa" placeholder="Digite o contrato caixa">
+                </div>
+                <label for="msg">Contrato</label>
+                <div class="form-group">
+                    <input type="text" name="" id="contrato" name="contrato" placeholder="Digite o contrato">
+                </div>
+                 <label for="msg">Acesso Associado</label>
+                <div class="form-group">
+                    <input type="text" name="" id="contratocaixa" name="contratocaixa" placeholder="Digite o contrato caixa">
+                </div>
+
                 <button class="positive ui button" type="submit"><i class="fa fa-check" aria-hidden="true"></i> Cadastrar</button>
                 </fieldset>
             </form>
@@ -67,53 +96,6 @@
 
         <!-- /.container -->
     </div>
-
-    <!--=========================================================-->
-                        <!--LISTAR PERGUNTAS-->
-    <!--=========================================================-->
-    <div id="tab-visualiza-msg" style="display:none;">
-        <p class="text-p"> Perguntas</p>
-        <table class="table">
-            <thead>
-                <tr>
-                    <!-- <th>Nome</th> -->
-                    <th>Perguntas</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($dados as $key => $value): ?>
-                <tr data-id="<?php echo $value['id_pergunta']; echo $value['id_resposta']?>">
-                    <!-- <td>#<?php //echo $value['id']; ?></td> -->
-
-                    <!-- ACCORDION SEMANTIC 
-                    <?php //echo '<pre>'; print_r($dados); ?>
-                    <div class="ui styled fluid accordion">
-                        <div class="title align-div">
-                            <i class="dropdown icon"></i>
-                            <?php echo $value['no_pergunta']; ?>
-                        </div>
-                        <div id="align-text" class="content">
-                        <?php foreach ($value['no_respostas'] as $resposta): ?>
-                            <p class="transition hidden"><i class="fa fa-arrow-right" aria-hidden="true"></i> <?php echo $resposta['no_resposta']; ?></p><hr>
-                            <button class="tiny ui red button btn-excluir-resp" action="../controller/crud.php"><i class="fa fa-trash" aria-hidden="true"></i> Excluir</button>                                                             
-                        <?php endforeach; ?>                                 
-                        </div>          
-                    </div>
-                     FIM ACCORDION -->
-
-                    <td class="about" data-name="pergunta" style="text-align: left;"><?php echo $value['no_pergunta']; ?></td>
-                    <td>
-                        <button class="tiny ui blue button btn-editar-msg"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</button> 
-                        <button class="tiny ui red button btn-excluir-msg" action="../controller/crud.php"><i class="fa fa-trash" aria-hidden="true"></i> Excluir</button>
-                        <button class="btn btn-success btn-save-msg" action="../controller/crud.php" style="display:none;"><i class="fa fa-check" aria-hidden="true"></i> Salvar</button>
-                    </td>
-                </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-    </div>
-
     <!--=========================================================-->
                     <!--LISTAR USUÁRIO/ADMINISTRADOR-->
     <!--=========================================================-->
@@ -364,64 +346,7 @@
         }
     });
     
-
-    //CADASTRAR PERGUNTA
-    $('#form-cad-msg').unbind('submit').submit(function(e) {
-        e.preventDefault();
-        $('[name="action"]').val('inserirMsg');
-
-        let dadosForm = $(this).serialize();
-        let pergunta = $('#pergunta').val();
-
-         if (!pergunta){
-            return message('error', 'Campo pergunta vazio!');
-        }
-
-       //MANDA O AJAX DE PERGUNTA
-        $.ajax({
-            type: 'POST',
-            url: '../controller/crud.php',
-            data: $(this).serialize(),
-            dataType: 'json',
-            success: function(json) {
-                if (json.type == 'success') {
-                    //toastr.success("Pergunta cadastrada com Sucesso!");                    
-                    $('#form-cad-msg')[0].reset();
-                    setTimeout(() => {
-                        window.location.href = './template.php';
-                    }, 4500);
-                    return message('success', json.msg);
-                    //window.location.href = './faq.php';
-                } else {
-                    //toastr.error("Error ao cadastrar Pergunta!");
-                    return message('error', json.msg);
-                }
-            }
-        });
-    });
-
-     $('#form-grid-perguntas').unbind('submit').submit(function(e) {
-        e.preventDefault();
-        $('[name="action"]').val('gridPerguntas');
-
-        $.ajax({
-            type: 'GET',
-            url: '../controller/crud.php',
-            data: {
-                action: $('[name="action"]').val('gridPerguntas')
-            },
-            dataType: 'json',
-            success: function(json) {
-                if (json.type == 'success') {
-                   setTimeout(() => {
-                        window.location.href = './template.php';
-                    }, 4500);
-                    return message('success', json.msg);
-                }
-            }
-        });
-    });
-
+  
     //EDITAR USUARIO/ADMIN
     $('#form-perfil').unbind('submit').submit(function(e) {
         e.preventDefault();
@@ -448,114 +373,7 @@
                 }
             });
         });
-
-    //EDITAR PERGUNTA
-    $('.btn-editar-msg').unbind('click').click(function(e) {
-        e.preventDefault();
-
-        let $trClicada = $(e.target).closest('tr');
-
-        $.each($trClicada.find('td.about'), function(key, rs) { 
-            $td = $(rs);
-
-            valorAEditar = $td.text();
-            
-            $td.html('<div class="field"><input class="form-control" width="50" name="'+$td.attr('data-name')+'" value="'+valorAEditar+'"></div>')
-            $($trClicada).find('.btn-editar-msg').hide();
-            $($trClicada).find('.btn-excluir-msg').hide();
-            //MOSTRAR SAVE
-            $($trClicada).find('.btn-save-msg').show();
-        });
-    });
-
-    //SALVAR PERGUNTA
-    $('.btn-save-msg').unbind('click').click(function(e) {
-        //EVITAR MAIS DE UMA REQUISIÇÃO
-        e.stopImmediatePropagation();
-
-        let $trClicadaQuandoSalvar = $(e.target).closest('tr');
-        let $inputsDaTr = $trClicadaQuandoSalvar.find('input')
-
-        //VARIAVEL QUE VAI NO DATA DO AJAX
-        let objMensagem = {}
-        
-        //VARRENDO INPUTS DA TR CLICADA
-        $.each($inputsDaTr, function (key, rs) {
-            let $input = $(rs)
-            let nomeInput = $input.attr('name')
-
-            //PEGANDO VALORES DA PROPRIEDADE NAME
-            objMensagem[nomeInput] = $input.val()
-        })
-
-            objMensagem.id = $trClicadaQuandoSalvar.attr('data-id')
-            objMensagem.action = 'editarMsg';
-
-        //AJAX
-        $.ajax({
-            type: 'POST',
-            url: $('.btn-save-msg').attr('action'),
-            data: objMensagem,
-            dataType: 'json',
-            success: function(json) {
-                if (json.type == 'success') {
-                    //DISABLE NO INPUT APÓS SALVAR
-                    $inputsDaTr.closest('.field').css('opacity', '0.4');
-                    $($trClicadaQuandoSalvar).find('.btn-save-msg').css('opacity', '0.4');
-                    setTimeout(() => {
-                        window.location.href = './template.php';
-                    }, 4500);
-                    return message('success', json.msg);
-                }
-            }
-        });
-    });
     
-    //EXCLUIR PERGUNTA
-    $('.btn-excluir-msg').unbind('click').click(function(e) {
-        e.preventDefault();
-        var idMsg = $(e.target).closest('tr').attr('data-id');
-
-        $.ajax({
-            type: 'POST',
-            url: $('.btn-excluir-msg').attr('action'),
-            data: {
-                id: idMsg,
-                action: 'excluirMsg'
-            },
-            dataType: 'json',
-            success: function(json) {
-                if (json.type == 'success') {
-                    $(e.target).closest('tr').hide()
-                    return message('success', json.msg);
-                } else {
-                    return message('error', json.msg);
-                }
-            }
-        });
-    });
-
-     //EXCLUIR RESPOSTA
-    $('.btn-excluir-resp').unbind('click').click(function(e) {
-        e.preventDefault();
-        var idMsg = $(e.target).closest('tr').attr('data-id');
-
-        $.ajax({
-            type: 'POST',
-            url: $('.btn-excluir-resp').attr('action'),
-            data: {
-                id: idMsg,
-                action: 'excluirResp'
-            },
-            dataType: 'json',
-            success: function(json) {
-                if (json.type == 'success') {
-                $(e.target).closest('tr').hide()
-                return message('success', json.msg);
-                }
-            }
-        });
-    });
 
     //CADASTRAR ADMINISTRADOR
     $('#form-perfil-admin').unbind('submit').submit(function(e) {
@@ -634,15 +452,7 @@
         $('#tab-perfil').hide();
     });
 
-    //TAB-VISUALIZA-MSG
-    $('[href="#tab-visualiza-msg"]').click(function(){
-        $('#tab-visualiza-msg').css('display', 'block');
-        $('#tab-cadastro-msg').hide();
-        $('#tab-usuario').hide();
-        $('#tab-usuario-admin').hide();
-        $('#tab-perfil').hide();
-    });
-
+    
     //BOTAO-NOVO-USUARIO
     $('#botao-novo').click(function(){
         $('#tab-usuario-admin').css('display', 'block');

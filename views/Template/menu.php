@@ -21,6 +21,15 @@
             <a href="#tab-usuario-admin"><i class="fa fa-users" aria-hidden="true"></i>Cadastrar Usuário/Admin</a>
         </li> -->
         <li>
+            <a href="#tab-exportar-planilhas"><i class="fa fa-users" aria-hidden="true"></i> Exportar Planilhas</a>
+        </li>
+         <li>
+            <a href="#tab-consultas"><i class="fa fa-users" aria-hidden="true"></i> Consultas</a>
+        </li>
+         <li>
+            <a href="#tab-historico"><i class="fa fa-users" aria-hidden="true"></i> Histórico</a>
+        </li>
+        <li>
             <a href="#tab-perfil"><i class="fa fa-user" aria-hidden="true"></i> Meu Perfil</a>
         </li>
        <!-- <li>

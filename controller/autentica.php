@@ -33,7 +33,7 @@
         echo json_encode(['type' => 'success', 'tipoUsuarioLogado' => $tipoUsuarioLogado]);
         exit;
 
-        header('Location: ../views/ViewFaq/faq.php');
+        header('Location: ../views/ViewFaq/form_oi.php');
 
     }
 
