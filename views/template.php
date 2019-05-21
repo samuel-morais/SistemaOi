@@ -60,44 +60,29 @@
                 <tr><td align="right" >Circuito *</td><td>
                     <input type="text" name="Circuito" id="Circuito" required >
 
-                </td><td align="margin-left" >Motivo ísentos * 
-                        <select name="select" id="select_isentos">
+                </td><td align="right" >Motivo ísentos * </td><td>
+                        <select name="select" id="select_isentos" required size="1">
                             <option value="SELECIONE">Selecione</option>
-                                        <option value="motivo1">ANUENCIA PREVIA</option>
-                                        <option value="motivo2">ACESSO RETIRADO</option>
-                                        <option value="motivo3">ACORDO / DECISÃO GERENCIAL</option>
-                                        <option value="motivo4">ATIVACAO REDE</option>
-                                        <option value="motivo5">BLOQUEIO FINANCEIRO</option>
-                                        <option value="motivo6">FATURAMENTO MANUAL</option>
-                                        <option value="motivo7">HOMOLOGAÇÃO/ACEITE CLIENTE</option>
-                                        <option value="motivo8">INTERCONEXAO</option>
-                                        <option value="motivo9">ISENÇÃO PARA ABATER COBRANÇA A MAIOR</option>
-                                        <option value="motivo10">ISENTO CONTRATUALMENTE</option>
-                                        <option value="motivo11">JA FATURANDO</option>
-                                        <option value="motivo12">MIGRACAO REDE</option>
-                                        <option value="motivo13">MUDANÇA ENDEREÇO</option>
-                                        <option value="motivo14">OS DE RETIRADA ABERTA/SOLICITADA</option>
-                                        <option value="motivo15">PENDENTE EMISSÃO OS DE RETIRADA</option>
-                                        <option value="motivo16">PENDENTE ENTREGA CPE</option>
-                                        <option value="motivo17">PERMUTA DE SERVICO</option>
-                                        <option value="motivo18">PRODUTO NAO FATURAVEL</option>
-                                        <option value="motivo19">PROJETO ESCOLA</option>
-                                        <option value="motivo20">RETIRAR ISENCAO COM RETROATIVO</option>
-                                        <option value="motivo21">RETIRAR ISENCAO SEM RETROATIVO</option>
-                                        <option value="motivo22">SEM CONTRATO</option>
-                                        <option value="motivo23">SOLUÇÃO COMERCIAL</option>
-                                        <option value="motivo24">SOLUÇÃO PROVISORIA</option>
-                                        <option value="motivo25">SOLUCAO TECNICA</option>
-                                        <option value="motivo26">TRY&BUY</option>            
-                                    </select> </td></tr>
+
+                                        <option value="motivo1">ACESSO RETIRADO</option>
+                                        <option value="motivo2">ACORDO / DECISÃO GERENCIAL</option>
+                                        <option value="motivo3">FATURAMENTO MANUAL</option>
+                                        <option value="motivo4">HOMOLOGAÇÃO/ACEITE CLIENTE</option>
+                                        <option value="motivo5">ISENTO CONTRATUALMENTE</option>
+                                        <option value="motivo6">JA FATURANDO</option>
+                                        <option value="motivo7">SOLUÇÃO TÉCNICA</option>
+                                        <option value="motivo8">OS DE RETIRADA ABERTA/SOLICITADA </option>
+          
+                                    </select></td></tr>
             
             <tr><td align="right" >Número Logico *</td><td>
-                <input type="text" name="Número Logico *" id="Número_Logico_*" ></td>
+                <input type="text" name="Número Logico *" id="Número_Logico" required></td>
+            
             <td align="right" >Acesso Associado</td><td>
                 <input type="text" name="Acesso Associado" id="Acesso_Associado" ></td></tr>
             
             <tr><td align="right" >Chave DDD *</td><td>
-                <input type="text" name="Chave DDD *" id="Chave_DDD_*" ></td>
+                <input type="text" name="Chave DDD *" id="Chave_DDD_" required></td>
 
             <td align="right" >Oficio de Solicitação</td><td>
                 <input type="text" name="Oficio de Solicitação" id="Oficio_de_Solicitacao" ></td></tr>
@@ -115,7 +100,7 @@
                 <input type="text" name="Circuito na Base Cliente" id="Circuito_na_Base_Cliente" ></td></tr>
             
             <tr><td align="right" >Contrato oi *</td><td>
-                <select name="select" id= "contrato_oi_select">
+                <select name="select" id= "contrato_oi_select" required>
                     <option value="SELECIONE">Selecione</option>
                     <option value="10394_2017">10394/2017</option>
                     <option value="10402_2017">10402/2017</option>
@@ -139,9 +124,7 @@
                 <input type="text" name="0" id="" ></td></tr>
             
             <tr><td align="right" >Observações</td><td>
-                <input type="text" name="Observação" id="Observacoesform" ></td>
-
-            <td align="right" >Observações</td><td><input type="text" name="Observação" id="Observacao" ></td></tr>
+                <textarea id="observacoesform" cols="30" rows="5"> ></textarea>
             
             <tr><td align="right" >UF</td><td><input type="text" name="UF" id="UF" ></td>
 
