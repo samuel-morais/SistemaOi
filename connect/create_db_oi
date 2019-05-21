@@ -1,0 +1,11 @@
+<?php
+
+class Connect 
+{
+    private $server = 'localhost';
+    private $user = 'root';
+    private $password = '';
+    private $bank = 'base_oi';
+    private $conn;
+
+    insert into table 

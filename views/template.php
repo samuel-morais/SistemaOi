@@ -55,38 +55,201 @@
                     <input type="text" id="nome" tabindex="-1" class="form-control" name="nome" value="<?php echo $_SESSION['user']['nome']; ?>">
                 </div>
                 </div>
-                <label for="msg">Circuitos:*</label>
-                <div class="form-group">
-                    <input type="text" name="" id="circuitos" name="circuitos" placeholder="Digite o circuito">
-                </div>
-                <label for="msg">Chave</label>
-                <div class="form-group">
-                    <input type="text" name="" id="chave" name="chave" placeholder="Digite a chave">
-                </div>
-                <label for="msg">Nome Logico</label>
-                <div class="form-group">
-                    <input type="text" name="" id="NomeLogico" name="NomeLogico" placeholder="Digite o número Lógico">
-                </div>
-                <label for="msg">Chave DDD</label>
-                <div class="form-group">
-                    <input type="text" name="" id="chaveddd" name="chaveddd" placeholder="Digite a chave">
-                </div>
-                <label for="msg">Chave Caixa</label>
-                <div class="form-group">
-                    <input type="text" name="" id="chavecaixa" name="chavecaixa" placeholder="Digite a chave Caixa">
-                </div>
-                <label for="msg">Contrato Caixa</label>
-                <div class="form-group">
-                    <input type="text" name="" id="contratocaixa" name="contratocaixa" placeholder="Digite o contrato caixa">
-                </div>
-                <label for="msg">Contrato</label>
-                <div class="form-group">
-                    <input type="text" name="" id="contrato" name="contrato" placeholder="Digite o contrato">
-                </div>
-                 <label for="msg">Acesso Associado</label>
-                <div class="form-group">
-                    <input type="text" name="" id="contratocaixa" name="contratocaixa" placeholder="Digite o contrato caixa">
-                </div>
+                <table >
+                
+                <tr><td align="right" >Circuito *</td><td>
+                    <input type="text" name="Circuito" id="Circuito" required >
+
+                </td><td align="margin-left" >Motivo ísentos * 
+                        <select name="select" id="select_isentos">
+                            <option value="SELECIONE">Selecione</option>
+                                        <option value="motivo1">ANUENCIA PREVIA</option>
+                                        <option value="motivo2">ACESSO RETIRADO</option>
+                                        <option value="motivo3">ACORDO / DECISÃO GERENCIAL</option>
+                                        <option value="motivo4">ATIVACAO REDE</option>
+                                        <option value="motivo5">BLOQUEIO FINANCEIRO</option>
+                                        <option value="motivo6">FATURAMENTO MANUAL</option>
+                                        <option value="motivo7">HOMOLOGAÇÃO/ACEITE CLIENTE</option>
+                                        <option value="motivo8">INTERCONEXAO</option>
+                                        <option value="motivo9">ISENÇÃO PARA ABATER COBRANÇA A MAIOR</option>
+                                        <option value="motivo10">ISENTO CONTRATUALMENTE</option>
+                                        <option value="motivo11">JA FATURANDO</option>
+                                        <option value="motivo12">MIGRACAO REDE</option>
+                                        <option value="motivo13">MUDANÇA ENDEREÇO</option>
+                                        <option value="motivo14">OS DE RETIRADA ABERTA/SOLICITADA</option>
+                                        <option value="motivo15">PENDENTE EMISSÃO OS DE RETIRADA</option>
+                                        <option value="motivo16">PENDENTE ENTREGA CPE</option>
+                                        <option value="motivo17">PERMUTA DE SERVICO</option>
+                                        <option value="motivo18">PRODUTO NAO FATURAVEL</option>
+                                        <option value="motivo19">PROJETO ESCOLA</option>
+                                        <option value="motivo20">RETIRAR ISENCAO COM RETROATIVO</option>
+                                        <option value="motivo21">RETIRAR ISENCAO SEM RETROATIVO</option>
+                                        <option value="motivo22">SEM CONTRATO</option>
+                                        <option value="motivo23">SOLUÇÃO COMERCIAL</option>
+                                        <option value="motivo24">SOLUÇÃO PROVISORIA</option>
+                                        <option value="motivo25">SOLUCAO TECNICA</option>
+                                        <option value="motivo26">TRY&BUY</option>            
+                                    </select> </td></tr>
+            
+            <tr><td align="right" >Número Logico *</td><td>
+                <input type="text" name="Número Logico *" id="Número_Logico_*" ></td>
+            <td align="right" >Acesso Associado</td><td>
+                <input type="text" name="Acesso Associado" id="Acesso_Associado" ></td></tr>
+            
+            <tr><td align="right" >Chave DDD *</td><td>
+                <input type="text" name="Chave DDD *" id="Chave_DDD_*" ></td>
+
+            <td align="right" >Oficio de Solicitação</td><td>
+                <input type="text" name="Oficio de Solicitação" id="Oficio_de_Solicitacao" ></td></tr>
+            
+            <tr><td align="right" >Chave Caixa</td><td>
+                <input type="text" name="Chave Caixa" id="Chave_Caixa" ></d>
+
+            <td align="right" >Data Homologação</td><td>
+                <input type="text" name="Data Homologação" id="Data_Homologacao" ></td></tr>
+            
+            <tr><td align="right" >Contrato Caixa</td><td>
+                <input type="text" name="Contrato Caixa" id="Contrato_Caixa" ></td>
+
+            <td align="right" >Circuito na Base Cliente</td><td>
+                <input type="text" name="Circuito na Base Cliente" id="Circuito_na_Base_Cliente" ></td></tr>
+            
+            <tr><td align="right" >Contrato oi *</td><td>
+                <select name="select" id= "contrato_oi_select">
+                    <option value="SELECIONE">Selecione</option>
+                    <option value="10394_2017">10394/2017</option>
+                    <option value="10402_2017">10402/2017</option>
+                    <option value="1107_2013">1107/2013</option>
+                    <option value="14081_2017">14081/2017</option>
+                    <option value="14084_2017">14084/2017</option>
+                    <option value="14086_2017">14086/2017</option>
+                    <option value="14135_2018">14135/2018</option>
+                    <option value="1494_2017">1494/2017</option>
+                    <option value="3907_2013">3907/2013</option>
+                    <option value="6001_2014">6001/2014</option>
+                    <option value="6302_2018">6302/2018</option>
+                    <option value="7559_2015">7559/2015</option>                   
+                </select> 
+
+            </td><td align="right" >Numero da Atividade</td><td>
+            <input type="text" name="Numero da Atividade" id="Numero_da_Atividade" ></td></tr>
+            
+            <tr><td align="right" >Valor Contrato *</td><td>
+                <input type="text" name="Valor Contrato *" id="Valor_Contrato_*" ></td><td align="right" ></td><td>
+                <input type="text" name="0" id="" ></td></tr>
+            
+            <tr><td align="right" >Observações</td><td>
+                <input type="text" name="Observação" id="Observacoesform" ></td>
+
+            <td align="right" >Observações</td><td><input type="text" name="Observação" id="Observacao" ></td></tr>
+            
+            <tr><td align="right" >UF</td><td><input type="text" name="UF" id="UF" ></td>
+
+            <td align="right" >Ciclo</td><td>
+                <input type="text" name="Ciclo" id="Ciclo" ></td></tr>
+            
+            <tr><td align="right" >Local Lit / LOCAL</td><td>
+                <input type="text" name="Local Lit / LOCAL" id="Local_Lit_LOCAL" ></td>
+
+            <td align="right" >Dia_Vencim</td><td>
+                <input type="text" name="Dia_Vencim" id="Dia_Vencim" ></td></tr>
+            
+            <tr><td align="right" >Meio / TERMINAL</td><td>
+                <input type="text" name="Meio / TERMINAL" id="Meio_TERMINAL" ></td>
+
+            <td align="right" >Aglutinador</td><td>
+                <input type="text" name="Aglutinador" id="Aglutinador" ></td></tr>
+            
+            <tr><td align="right" >DT INSTALAÇÃO</td><td>
+                <input type="text" name="DT INSTALAÇÃO" id="DT_INSTALACAO" ></td>
+
+            <td align="right" >ChaveCPCT</td><td>
+                <input type="text" name="ChaveCPCT" id="ChaveCPCT" ></td></tr>
+            
+            <tr><td align="right" >DDD / CODIGO REGIAO</td><td>
+                <input type="text" name="DDD / CODIGO REGIAO" id="DDD_CODIGO_REGIAO" ></td>
+
+            <td align="right" >CCUS</td><td>
+                <input type="text" name="CCUS" id="CCUS" ></td></tr>
+            
+            <tr><td align="right" >Produto DADOS / TIPO CIRCUITO</td><td>
+                <input type="text" name="Produto DADOS / TIPO CIRCUITO" id="Produto_DADOS_TIPO_CIRCUITO" ></td><td align="right" >Designacao DADOS</td><td>
+                    <input type="text" name="Designacao DADOS" id="Designacao_DADOS" ></td></tr>
+            
+            <tr><td align="right" >Velocidade</td><td>
+                <input type="text" name="Velocidade" id="Velocidade" ></td>
+
+            <td align="right" >Degrau tarif / DEGRAU</td><td><input type="text" name="Degrau tarif / DEGRAU" id="Degrau_tarif_DEGRAU" ></td></tr>
+            
+            <tr><td align="right" >CNPJ / CNPJ TITULAR</td><td>
+                <input type="text" name="CNPJ / CNPJ TITULAR" id="CNPJ_CNPJ_TITULAR" ></td>
+
+            <td align="right" >Tp CCUS</td><td>
+                <input type="text" name="Tp CCUS" id="Tp_CCUS" ></td></tr>
+            
+            <tr><td align="right" >Data de Retirada</td><td>
+                <input type="text" name="Data de Retirada" id="Data_de_Retirada" ></td>
+
+            <td align="right" >CNPJ USUARIO</td><td>
+                <input type="text" name="CNPJ USUARIO" id="CNPJ_USUARIO" ></td></tr>
+            
+            <tr><td align="right" >Local Num</td><td>
+                <input type="text" name="Local Num" id="Local_Num" ></td>
+
+            <td align="right" >CATEGORIA</td><td><input type="text" name="CATEGORIA" id="CATEGORIA" ></td></tr>
+            
+            <tr><td align="right" >CJ não tem na RII</td><td>
+                <input type="text" name="CJ não tem na RII" id="CJ_nao_tem_na_RII" ></td>
+
+            <td align="right" >SITUAÇÃO</td><td>
+                <input type="text" name="SITUACÃO" id="SITUACAO" ></td></tr>
+            
+            <tr><td align="right" >R Social Titular / TITULAR</td><td>
+                <input type="text" name="R Social Titular / TITULAR" id="R_Social_Titular_TITULAR" ></td>
+
+            <td align="right" >CONTRATO</td><td>
+                <input type="text" name="CONTRATO" id="CONTRATO" ></td></tr>
+            
+            <tr><td align="right" >SU - não tem na RII</td><td>
+                <input type="text" name="SU - não tem na RII" id="SU_-_nao_tem_na_RII" ></td>
+
+            <td align="right" >AGRUPADOR</td><td>
+                <input type="text" name="AGRUPADOR" id="AGRUPADOR" ></td></tr>
+            
+            <tr><td align="right" >Ativo_Inativo</td><td>
+                <input type="text" name="Ativo_Inativo" id="Ativo_Inativo" ></td>
+
+            <td align="right" >SERVIÇOS</td><td>
+                <input type="text" name="SERVIÇOS" id="SERVICOS" ></td></tr>
+            
+            <tr><td align="right" >Descrição Produto Sisraf</td><td>
+                <input type="text" name="Descrição Produto Sisraf" id="Descricao_Produto_Sisraf" ></td><td align="right" >CICLO</td><td>
+                <input type="text" name="CICLO" id="CICLO" ></td></tr>
+            
+            <tr><td align="right" >AE</td><td>                
+                <input type="text" name="AE" id="AE" ></td>
+
+            <td align="right" >TERMINAL ANTERIOR / FICTICIO</td><td>
+                <input type="text" name="TERMINAL ANTERIOR / FICTICIO" id="TERMINAL_ANTERIOR_FICTICIO" ></td></tr>
+           
+            <tr><td align="right" >PONTA A</td><td>
+                <input type="text" name="PONTA A" id="PONTA_A" ></td>
+
+            <td align="right" >PONTA A</td><td>
+                <input type="text" name="PONTA A" id="PONTA_A" ></td></tr>
+            
+            <tr><td align="right" >PONTA B</td><td>
+                <input type="text" name="PONTA B" id="PONTA_B" ></td>
+
+            <td align="right" >PONTA B</td><td>
+                <input type="text" name="PONTA B" id="PONTA_B" ></td></tr>
+
+                        
+                    </form>
+                    </table>
+                    </tr> </td>
+                    <br>
+
 
                 <button class="positive ui button" type="submit"><i class="fa fa-check" aria-hidden="true"></i> Cadastrar</button>
                 </fieldset>

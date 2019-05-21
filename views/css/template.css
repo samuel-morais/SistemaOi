@@ -229,7 +229,7 @@ textarea {
     color: #0e62ad;
 }
 
-#tab-cadastro-msg,
+#tab-cadastro-form,
 #tab-visualiza-msg,
 #tab-perfil,
 #tab-usuario,
@@ -240,20 +240,20 @@ textarea {
     border-radius: 5px;
 }
 
-#tab-cadastro-msg p,
+#tab-cadastro-form p,
 #tab-visualiza-msg p,
 #tab-perfil p {
     text-align: center;
 }
 
-#tab-cadastro-msg div .container {
+#tab-cadastro-form div .container {
     margin-right: 0;
     margin-left: 0;
     padding-right: 0;
     padding-left: 0;
 }
 
-#tab-cadastro-msg div .container {
+#tab-cadastro-form div .container {
     max-width: 100%;
 }
 

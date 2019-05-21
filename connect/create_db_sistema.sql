@@ -15,22 +15,7 @@ CREATE TABLE usuario (
     usuario_tipo character(1)
 );
 
-CREATE TABLE perguntas (
-	id_pergunta int primary key auto_increment,
-    id_usuario int,
-	no_pergunta longtext,
-    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
-);
 
-CREATE TABLE respostas (
-	id_resposta int primary key auto_increment,
-    id_pergunta int,
-    id_usuario int,
-	no_resposta longtext,
-    avaliacao int(20),
-    FOREIGN KEY (id_pergunta) REFERENCES perguntas(id_pergunta),
-    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
-);
 /*
 CREATE TABLE usuario_tipo (
 	id_usuario_tipo int primary key not null auto_increment,

@@ -128,45 +128,6 @@ class UserDAO
     }
     
 
-    public function inserirMsg($idUsuario, $pergunta)
-    {
-        $this->idUsuario = $idUsuario;
-        $this->pergunta = $pergunta;
-
-        strip_tags($pergunta);
-
-        $sql = "INSERT INTO perguntas (id_usuario, no_pergunta) VALUES ('{$idUsuario}', '{$pergunta}');";
-        $result = mysqli_query($this->conexao->getConn(), $sql);
-        
-        if ($result) {
-            echo json_encode(['type' => 'success', 'msg' => 'Pergunta inserida com sucesso']);
-            exit;
-        } else {
-            echo json_encode(['type' => 'error', 'msg' => 'Erro ao tentar inserir pergunta']);
-            exit;
-        }
-    }
-
-    public function inserirResp($idPergunta, $idUsuario, $resposta)
-    {
-        $this->idPergunta = $idPergunta;
-        $this->idUsuario = $idUsuario;
-        $this->resposta = $resposta;
-
-        //strip_tags($resposta);
-        //var_dump($idPergunta, $resposta);
-
-        $sql = "INSERT INTO respostas (id_pergunta, id_usuario, no_resposta) VALUES ('{$idPergunta}', '{$idUsuario}', '{$resposta}');";
-        $result = mysqli_query($this->conexao->getConn(), $sql);
-        
-        if ($result) {
-            echo json_encode(['type' => 'success', 'msg' => 'Resposta inserida com sucesso']);
-            exit;
-        } else {
-            echo json_encode(['type' => 'error', 'msg' => 'Erro ao tentar inserir Resposta']);
-            exit;
-        }
-    }
 
     public function grid()
     {
@@ -193,17 +154,6 @@ class UserDAO
         }
     }
 
-     public function getRespostasByPergunta($id_pergunta)
-    {
-        $sql  = " SELECT * FROM respostas r INNER JOIN usuario u ON u.id_usuario = r.id_usuario WHERE r.id_pergunta = {$id_pergunta}";
-        $result = mysqli_query($this->conexao->getConn(), $sql) or die ('<script>alert("Falha ao editar o registro")</script>');
-        
-        $dados = array();
-        while ($row = $result->fetch_assoc()) {
-                $dados[] = $row;
-        }
-        return $dados;
-    }
 
     public function gridUsuario()
     {
@@ -235,37 +185,7 @@ class UserDAO
         }
     }
 
-    public function excluirMsg($idPergunta)
-    {
-        $this->id = $idPergunta;
-
-        $sql = "DELETE FROM perguntas WHERE id_pergunta = '{$idPergunta}';";
-        $result = mysqli_query($this->conexao->getConn(), $sql) or die ('<script>alert("Falha ao excluir o registro")</script>');
-
-        if ($result) {
-            echo json_encode(['type' => 'success', 'msg' => 'Pergunta excluída com sucesso']);
-            exit;
-        } else {
-            echo json_encode(['type' => 'error', 'msg' => 'Erro ao tentar excluir Pergunta']);
-            exit;
-        }
-    }
-
-    public function excluirResp($id)
-    {
-        $this->id = $id;
-
-        $sql = "DELETE FROM respostas WHERE id_resposta = '{$id}';";
-        $result = mysqli_query($this->conexao->getConn(), $sql) or die('<script>alert("Falha ao excluir o registro")</script>');
-
-        if ($result) {
-            echo json_encode(['type' => 'success', 'msg' => 'Excluído com sucesso']);
-            exit;
-        } else {
-            echo json_encode(['type' => 'error', 'msg' => 'Erro ao tentar excluir Resposta']);
-            exit;
-        }
-    }
+    
 
     public function excluirUser($id)
     {
