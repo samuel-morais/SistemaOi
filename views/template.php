@@ -58,7 +58,7 @@
                 <table >
                 
                 <tr><td align="right" >Circuito *</td><td>
-                    <input type="text" name="Circuito" id="Circuito" required >
+                    <input type="text" name="Circuito" id="Circuito" required maxlength="11">
 
                 </td><td align="right" >Motivo ísentos * </td><td>
                         <select name="select" id="select_isentos" required size="1">
@@ -76,22 +76,22 @@
                                     </select></td></tr>
             
             <tr><td align="right" >Número Logico *</td><td>
-                <input type="text" name="Número Logico *" id="Número_Logico" required></td>
+                <input type="text" name="Número Logico " id="Número_Logico" required maxlength="11" ></td>
             
             <td align="right" >Acesso Associado</td><td>
-                <input type="text" name="Acesso Associado" id="Acesso_Associado" ></td></tr>
+                <input type="text" name="Acesso Associado" id="Acesso_Associado"maxlength="11" ></td></tr>
             
             <tr><td align="right" >Chave DDD *</td><td>
-                <input type="text" name="Chave DDD *" id="Chave_DDD_" required></td>
+                <input type="text" name="Chave DDD " id="Chave_DDD" required maxlength="11" ></td>
 
             <td align="right" >Oficio de Solicitação</td><td>
-                <input type="text" name="Oficio de Solicitação" id="Oficio_de_Solicitacao" ></td></tr>
+                <input type="text" name="Oficio de Solicitação" id="Oficio_de_Solicitacao" maxlength="11" ></td></tr>
             
             <tr><td align="right" >Chave Caixa</td><td>
-                <input type="text" name="Chave Caixa" id="Chave_Caixa" ></d>
+                <input type="text" name="Chave Caixa" id="Chave_Caixa" maxlength="11" ></d>
 
             <td align="right" >Data Homologação</td><td>
-                <input type="text" name="Data Homologação" id="Data_Homologacao" ></td></tr>
+                <input type="date" name="Data Homologação" id="Data_Homologacao" maxlength="8"></td></tr>
             
             <tr><td align="right" >Contrato Caixa</td><td>
                 <input type="text" name="Contrato Caixa" id="Contrato_Caixa" ></td>
@@ -120,11 +120,16 @@
             <input type="text" name="Numero da Atividade" id="Numero_da_Atividade" ></td></tr>
             
             <tr><td align="right" >Valor Contrato *</td><td>
+<<<<<<< HEAD
                 <input SIZE=7 type="text" name="Valor Contrato *" id="Valor_Contrato_*" ><input type="checkbox" name="valor_negociado" value="vn">Valor Acordado</td><td align="right" ></td><td>
                 <input type="text" name="0" id="" ></td></tr>
+=======
+                <input type="checkbox" name="Valor Contrato *" id="Valor_Contrato_" ></td><td align="right" ></td><td>
+                <input type="text" name="0" id="" placeholder="Valo em acordo"></td></tr>
+>>>>>>> dc48e39aae4ad773b644e11b2a74d023cf2b29de
             
             <tr><td align="right" >Observações</td><td>
-                <textarea id="observacoesform" cols="30" rows="5"> ></textarea>
+                <textarea id="observacoesform" cols="30" rows="5"></textarea>
             
             <tr><td align="right" >UF</td><td><input type="text" name="UF" id="UF" ></td>
 
