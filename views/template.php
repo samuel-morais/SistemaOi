@@ -120,7 +120,7 @@
             <input type="text" name="Numero da Atividade" id="Numero_da_Atividade" ></td></tr>
             
             <tr><td align="right" >Valor Contrato *</td><td>
-                <input type="text" name="Valor Contrato *" id="Valor_Contrato_*" ></td><td align="right" ></td><td>
+                <input SIZE=7 type="text" name="Valor Contrato *" id="Valor_Contrato_*" ><input type="checkbox" name="valor_negociado" value="vn">Valor Acordado</td><td align="right" ></td><td>
                 <input type="text" name="0" id="" ></td></tr>
             
             <tr><td align="right" >Observações</td><td>
