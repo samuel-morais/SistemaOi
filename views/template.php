@@ -120,16 +120,15 @@
             <input type="text" name="Numero da Atividade" id="Numero_da_Atividade" ></td></tr>
             
             <tr><td align="right" >Valor Contrato *</td><td>
-<<<<<<< HEAD
-                <input SIZE=7 type="text" name="Valor Contrato *" id="Valor_Contrato_*" ><input type="checkbox" name="valor_negociado" value="vn">Valor Acordado</td><td align="right" ></td><td>
-                <input type="text" name="0" id="" ></td></tr>
-=======
-                <input type="checkbox" name="Valor Contrato *" id="Valor_Contrato_" ></td><td align="right" ></td><td>
-                <input type="text" name="0" id="" placeholder="Valo em acordo"></td></tr>
->>>>>>> dc48e39aae4ad773b644e11b2a74d023cf2b29de
+
+                <input SIZE=7 type="text" name="Valor Contrato *" id="Valor_Contrato_*" >
+                <input type="checkbox" name="valor_negociado" value="vn">Valor Acordado </td>
+
+
+
             
             <tr><td align="right" >Observações</td><td>
-                <textarea id="observacoesform" cols="30" rows="5"></textarea>
+                <textarea id="observacoesform" cols="70" rows="8"></textarea>
             
             <tr><td align="right" >UF</td><td><input type="text" name="UF" id="UF" ></td>
 
