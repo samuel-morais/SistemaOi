@@ -232,16 +232,16 @@
                 <input type="text" name="PONTA B" id="PONTA_B" ></td></tr>
 
                         
-                    </form>
-                    </table>
-                    </tr> </td>
-                    <br>
-
-
-                <button class="positive ui button" type="submit"><i class="fa fa-check" aria-hidden="true"></i> Cadastrar</button>
-                </fieldset>
             </form>
-        </div>
+            </table>
+            </tr> </td>
+            <br>
+
+
+            <button class="positive ui button" type="submit"><i class="fa fa-check" aria-hidden="true"></i> Cadastrar</button>
+            </fieldset>
+        </form>
+    </div>
 
 
         <!-- /.container -->
