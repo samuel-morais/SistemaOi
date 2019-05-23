@@ -43,7 +43,7 @@
     <div id="tab-cadastro-msg" style="display:none;">
         <p class="text-p">Cadastrar Dados</p>
         <div class="container-fluid">
-            <form id="form-cad-msg" class="container" id="needs-validation">
+            <form id="form-cad-msg" class="container" id="needs-validation" method="POST" action="consultas.php">
                 <input type="hidden" name="id_usuario" value="<?php echo $_SESSION['user']['id_usuario']; ?>">
                 <input type="hidden" name="action" value="">
                 <!-- <div id="msg-valida"></div> -->
@@ -61,7 +61,7 @@
                     <input type="text" name="Circuito" id="Circuito" required maxlength="11">
 
                 </td><td align="right" >Motivo ísentos * </td><td>
-                        <select name="select" id="select_isentos" required size="1">
+                        <select name="select" id="select_isentos" size="1">
                             <option value="SELECIONE">Selecione</option>
 
                                         <option value="motivo1">ACESSO RETIRADO</option>
@@ -76,13 +76,13 @@
                                     </select></td></tr>
             
             <tr><td align="right" >Número Logico *</td><td>
-                <input type="text" name="Número Logico " id="Número_Logico" required maxlength="11" ></td>
+                <input type="text" name="Número Logico " id="Numero_Logico"  maxlength="11" ></td>
             
             <td align="right" >Acesso Associado</td><td>
                 <input type="text" name="Acesso Associado" id="Acesso_Associado"maxlength="11" ></td></tr>
             
             <tr><td align="right" >Chave DDD *</td><td>
-                <input type="text" name="Chave DDD " id="Chave_DDD" required maxlength="11" ></td>
+                <input type="text" name="Chave DDD " id="Chave_DDD"  maxlength="11" ></td>
 
             <td align="right" >Oficio de Solicitação</td><td>
                 <input type="text" name="Oficio de Solicitação" id="Oficio_de_Solicitacao" maxlength="11" ></td></tr>
