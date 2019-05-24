@@ -1,12 +1,16 @@
-<?php 
+<?php
 
+$servidor ="localhost";
+$usuario = "root";
+$senha = "";
+$dbname = "base_oi";
 
-//$circuito = filter_input(INPUT_POST, 'Circuito', FILTER_SANITEZE_STRING);
+$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
 
+$consultas = $_POST['Circuito'];
 
-//echo "Circuito: $circuito";
+echo " Circuitos: $consultas";
 
+?>
 
-
- ?>
-
+	
