@@ -24,7 +24,7 @@
             <a href="#tab-exportar-planilhas"><i class="fa fa-users" aria-hidden="true"></i> Exportar Planilhas</a>
         </li>
          <li>
-            <a href="#tab-consultas"><i class="fa fa-users" aria-hidden="true"></i> Consultas</a>
+            <a href="consultas.php "><i class="fa fa-users" aria-hidden="true"></i> Consultas</a>
         </li>
          <li>
             <a href="#tab-historico"><i class="fa fa-users" aria-hidden="true"></i> Histórico</a>

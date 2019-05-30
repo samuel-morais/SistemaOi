@@ -243,6 +243,8 @@
             <button class="positive ui button" type="submit"><i class="fa fa-check" aria-hidden="true"></i> Cadastrar</button>
             </fieldset>
         </form>
+        <br>
+        <center><input type=button value=" Voltar " OnClick="history.back()"></center>
     </div>
      <div id="#tab-form" style="display:none;">
         ]
@@ -361,6 +363,8 @@
                     <button class="positive ui button" type="submit" ><i class="fa fa-check" aria-hidden="true"></i> Salvar</button>
                 </fieldset>
             </form>
+            <br>
+        
         </div>
     </div>
 
@@ -401,6 +405,8 @@
                         <button class="positive ui button" type="submit"><i class="fa fa-check" aria-hidden="true"></i> Salvar</button>
                     </fieldset>
                 </form>
+                <br>
+                <center><input type=button value=" Voltar " OnClick="history.back()"></center>
             </div>
         </div>
     </div>
