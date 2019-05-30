@@ -24,7 +24,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HOME | SISTEMA OI</title>
-    <link rel="icon" type="image/png" href="/images/faq.png"/>
+    <link rel="icon" type="image/png" href="/images/Logo_oi.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
 <body>
@@ -45,7 +45,7 @@
     <div id="tab-cadastro-msg" style="display:none;">
         <p class="text-p">Cadastrar Dados</p>
         <div class="container-fluid">
-            <form id="form-cad-msg" class="container" id="needs-validation" method="POST" action="consultas.php">
+            <form id="form-cad-msg" class="container" id="needs-validation" method="POST" action="cad_form.php">
                 <input type="hidden" name="id_usuario" value="<?php echo $_SESSION['user']['id_usuario']; ?>">
                 <input type="hidden" name="action" value="">
                 <!-- <div id="msg-valida"></div> -->
