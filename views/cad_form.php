@@ -3,8 +3,8 @@
 require_once("connect/conexao.php")
 
 
-$circuito = $_POST['Circuito'];
-$numero_logico = $_POST['Numero_Logico'];
+$circuito = $_POST['circuito'];
+$numero_logico = $_POST['numero_logico'];
 
 
 $sql = "INSERT INTO 'inventario_oi' ('id_circuitos', 'numero_logico') VALUES ('$circuito', '$numero_logico')";

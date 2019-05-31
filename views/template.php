@@ -60,7 +60,7 @@
                 <table >
                 
                 <tr><td align="right" >Circuito *</td><td>
-                    <input type="text" name="Circuito" id="Circuito" required maxlength="11">
+                    <input type="text" name="circuito" id="circuito" required maxlength="11">
 
                 </td><td align="right" >Motivo ísentos * </td><td>
                         <select name="select" id="select_isentos" size="1">
@@ -78,28 +78,28 @@
                                     </select></td></tr>
             
             <tr><td align="right" >Número Logico *</td><td>
-                <input type="text" name="Número Logico " id="Numero_Logico"  maxlength="11" ></td>
+                <input type="text" name="numero_logico" id="numero_logico"  maxlength="11" ></td>
             
             <td align="right" >Acesso Associado</td><td>
-                <input type="text" name="Acesso Associado" id="Acesso_Associado"maxlength="11" ></td></tr>
+                <input type="text" name="acesso_associado" id="acesso_associado"maxlength="11" ></td></tr>
             
             <tr><td align="right" >Chave DDD *</td><td>
-                <input type="text" name="Chave DDD " id="Chave_DDD"  maxlength="11" ></td>
+                <input type="text" name="chave_ddd " id="chave_ddd"  maxlength="11" ></td>
 
             <td align="right" >Oficio de Solicitação</td><td>
-                <input type="text" name="Oficio de Solicitação" id="Oficio_de_Solicitacao" maxlength="11" ></td></tr>
+                <input type="text" name="oficio_solicitacao" id="oficio_solicitacao" maxlength="11" ></td></tr>
             
             <tr><td align="right" >Chave Caixa</td><td>
-                <input type="text" name="Chave Caixa" id="Chave_Caixa" maxlength="11" ></d>
+                <input type="text" name="chave_caixa" id="chave_caixa" maxlength="11" ></d>
 
             <td align="right" >Data Homologação</td><td>
-                <input type="date" name="Data Homologação" id="Data_Homologacao" maxlength="8"></td></tr>
+                <input type="date" name="data_homologacao" id="data_homologacao" maxlength="8"></td></tr>
             
             <tr><td align="right" >Contrato Caixa</td><td>
-                <input type="text" name="Contrato Caixa" id="Contrato_Caixa" ></td>
+                <input type="text" name="contrato_caixa" id="contrato_caixa" ></td>
 
             <td align="right" >Circuito na Base Cliente</td><td>
-                <input type="text" name="Circuito na Base Cliente" id="Circuito_na_Base_Cliente" ></td></tr>
+                <input type="text" name="circuito_base_cliente" id="circuito_base_cliente" ></td></tr>
             
             <tr><td align="right" >Contrato oi *</td><td>
                 <select name="select" id= "contrato_oi_select" required>
@@ -119,119 +119,117 @@
                 </select> 
 
             </td><td align="right" >Numero da Atividade</td><td>
-            <input type="text" name="Numero da Atividade" id="Numero_da_Atividade" ></td></tr>
+            <input type="text" name="numero_atividade" id="numero_atividade" ></td></tr>
             
             <tr><td align="right" >Valor Contrato *</td><td>
 
                 <input SIZE=7 type="text" name="Valor Contrato *" id="Valor_Contrato_*" >
                 <input type="checkbox" name="valor_negociado" value="vn">Valor Acordado </td>
 
-
-
             
             <tr><td align="right" >Observações</td><td>
                 <textarea id="observacoesform" cols="70" rows="8"></textarea>
             
-            <tr><td align="right" >UF</td><td><input type="text" name="UF" id="UF" ></td>
+            <tr><td align="right" >UF</td><td><input type="text" name="uf" id="uf" ></td>
 
             <td align="right" >Ciclo</td><td>
-                <input type="text" name="Ciclo" id="Ciclo" ></td></tr>
+                <input type="text" name="ciclo" id="ciclo" ></td></tr>
             
             <tr><td align="right" >Local Lit / LOCAL</td><td>
-                <input type="text" name="Local Lit / LOCAL" id="Local_Lit_LOCAL" ></td>
+                <input type="text" name="local_lit_local" id="local_lit_local" ></td>
 
             <td align="right" >Dia_Vencim</td><td>
-                <input type="text" name="Dia_Vencim" id="Dia_Vencim" ></td></tr>
+                <input type="text" name="dia_vencim" id="dia_vencim" ></td></tr>
             
             <tr><td align="right" >Meio / TERMINAL</td><td>
-                <input type="text" name="Meio / TERMINAL" id="Meio_TERMINAL" ></td>
+                <input type="text" name="meioterminal" id="meioterminal" ></td>
 
             <td align="right" >Aglutinador</td><td>
-                <input type="text" name="Aglutinador" id="Aglutinador" ></td></tr>
+                <input type="text" name="aglutinador" id="aglutinador" ></td></tr>
             
             <tr><td align="right" >DT INSTALAÇÃO</td><td>
-                <input type="text" name="DT INSTALAÇÃO" id="DT_INSTALACAO" ></td>
+                <input type="text" name="dt_instalacao" id="dt_instalacao" ></td>
 
             <td align="right" >ChaveCPCT</td><td>
-                <input type="text" name="ChaveCPCT" id="ChaveCPCT" ></td></tr>
+                <input type="text" name="chavecpct" id="chavecpct" ></td></tr>
             
             <tr><td align="right" >DDD / CODIGO REGIAO</td><td>
-                <input type="text" name="DDD / CODIGO REGIAO" id="DDD_CODIGO_REGIAO" ></td>
+                <input type="text" name="ddd_codigo_regiao" id="ddd_codigo_regiao" ></td>
 
             <td align="right" >CCUS</td><td>
-                <input type="text" name="CCUS" id="CCUS" ></td></tr>
+                <input type="text" name="ccus" id="ccus" ></td></tr>
             
             <tr><td align="right" >Produto DADOS / TIPO CIRCUITO</td><td>
-                <input type="text" name="Produto DADOS / TIPO CIRCUITO" id="Produto_DADOS_TIPO_CIRCUITO" ></td><td align="right" >Designacao DADOS</td><td>
-                    <input type="text" name="Designacao DADOS" id="Designacao_DADOS" ></td></tr>
+                <input type="text" name="produtos_dados_tipo_circuito" id="produtos_dados_tipo_circuito" ></td><td align="right" >Designacao DADOS</td><td>
+                    <input type="text" name="designacao_dados" id="designacao_dados" ></td></tr>
             
             <tr><td align="right" >Velocidade</td><td>
-                <input type="text" name="Velocidade" id="Velocidade" ></td>
+                <input type="text" name="velocidade" id="velocidade" ></td>
 
-            <td align="right" >Degrau tarif / DEGRAU</td><td><input type="text" name="Degrau tarif / DEGRAU" id="Degrau_tarif_DEGRAU" ></td></tr>
+            <td align="right" >Degrau tarif / DEGRAU</td><td><input type="text" name="degrau_tarif_degrau" id="degrau_tarif_degrau" ></td></tr>
             
             <tr><td align="right" >CNPJ / CNPJ TITULAR</td><td>
-                <input type="text" name="CNPJ / CNPJ TITULAR" id="CNPJ_CNPJ_TITULAR" ></td>
+                <input type="text" name="cnpj_titular" id="cnpj_titular" ></td>
 
             <td align="right" >Tp CCUS</td><td>
-                <input type="text" name="Tp CCUS" id="Tp_CCUS" ></td></tr>
+                <input type="text" name="tp_ccus" id="tp_ccus" ></td></tr>
             
             <tr><td align="right" >Data de Retirada</td><td>
-                <input type="text" name="Data de Retirada" id="Data_de_Retirada" ></td>
+                <input type="text" name="data_retirada" id="data_retirada" ></td>
 
             <td align="right" >CNPJ USUARIO</td><td>
-                <input type="text" name="CNPJ USUARIO" id="CNPJ_USUARIO" ></td></tr>
+                <input type="text" name="cnpj_usuario" id="cnpj_usuario" ></td></tr>
             
             <tr><td align="right" >Local Num</td><td>
-                <input type="text" name="Local Num" id="Local_Num" ></td>
+                <input type="text" name="local_num" id="local_num" ></td>
 
-            <td align="right" >CATEGORIA</td><td><input type="text" name="CATEGORIA" id="CATEGORIA" ></td></tr>
+            <td align="right" >CATEGORIA</td><td><input type="text" name="categoria" id="categoria" ></td></tr>
             
             <tr><td align="right" >CJ não tem na RII</td><td>
-                <input type="text" name="CJ não tem na RII" id="CJ_nao_tem_na_RII" ></td>
+                <input type="text" name="cj_nao_tem_rii" id="cj_nao_tem_rii" ></td>
 
             <td align="right" >SITUAÇÃO</td><td>
-                <input type="text" name="SITUACÃO" id="SITUACAO" ></td></tr>
+                <input type="text" name="situacao" id="situacao" ></td></tr>
             
             <tr><td align="right" >R Social Titular / TITULAR</td><td>
-                <input type="text" name="R Social Titular / TITULAR" id="R_Social_Titular_TITULAR" ></td>
+                <input type="text" name="r_social_titular" id="r_social_titular" ></td>
 
             <td align="right" >CONTRATO</td><td>
-                <input type="text" name="CONTRATO" id="CONTRATO" ></td></tr>
+                <input type="text" name="contrato" id="contrato" ></td></tr>
             
             <tr><td align="right" >SU - não tem na RII</td><td>
-                <input type="text" name="SU - não tem na RII" id="SU_-_nao_tem_na_RII" ></td>
+                <input type="text" name="su_nao_tem_RII" id="su_nao_tem_RII" ></td>
 
             <td align="right" >AGRUPADOR</td><td>
-                <input type="text" name="AGRUPADOR" id="AGRUPADOR" ></td></tr>
+                <input type="text" name="agrupador" id="agrupador" ></td></tr>
             
             <tr><td align="right" >Ativo_Inativo</td><td>
-                <input type="text" name="Ativo_Inativo" id="Ativo_Inativo" ></td>
+                <input type="text" name="ativo_inativo" id="ativo_inativo" ></td>
 
             <td align="right" >SERVIÇOS</td><td>
-                <input type="text" name="SERVIÇOS" id="SERVICOS" ></td></tr>
+                <input type="text" name="servicos" id="servicos" ></td></tr>
             
             <tr><td align="right" >Descrição Produto Sisraf</td><td>
-                <input type="text" name="Descrição Produto Sisraf" id="Descricao_Produto_Sisraf" ></td><td align="right" >CICLO</td><td>
-                <input type="text" name="CICLO" id="CICLO" ></td></tr>
+                <input type="text" name="descricao_produto_sisraf" id="descricao_produto_sisraf" ></td><td align="right" >CICLO</td><td>
+                <input type="text" name="ciclo_1" id="ciclo_1" ></td></tr>
             
             <tr><td align="right" >AE</td><td>                
-                <input type="text" name="AE" id="AE" ></td>
+                <input type="text" name="ae" id="ae" ></td>
 
             <td align="right" >TERMINAL ANTERIOR / FICTICIO</td><td>
-                <input type="text" name="TERMINAL ANTERIOR / FICTICIO" id="TERMINAL_ANTERIOR_FICTICIO" ></td></tr>
+                <input type="text" name="terminal_anterior_ficticio" id="terminal_anterior_ficticio" ></td></tr>
            
             <tr><td align="right" >PONTA A</td><td>
-                <input type="text" name="PONTA A" id="PONTA_A" ></td>
+                <input type="text" name="ponta_a" id="ponta_a" ></td>
 
             <td align="right" >PONTA A</td><td>
-                <input type="text" name="PONTA A" id="PONTA_A" ></td></tr>
+                <input type="text" name="ponta_a" id="ponta_a" ></td></tr>
             
             <tr><td align="right" >PONTA B</td><td>
-                <input type="text" name="PONTA B" id="PONTA_B" ></td>
+                <input type="text" name="pontab" id="pontab" ></td>
 
             <td align="right" >PONTA B</td><td>
-                <input type="text" name="PONTA B" id="PONTA_B" ></td></tr>
+                <input type="text" name="pontab" id="pontab" ></td></tr>
 
                         
             </form>
