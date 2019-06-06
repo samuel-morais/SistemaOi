@@ -50,7 +50,6 @@
     <!-- MENU -->
     <ul class="menu">
         <li class="menu-li"><a href="form_oi.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-        <!-- <li class="menu-li"><a href="#news"><i class="fa fa-question" aria-hidden="true"></i> Perguntas</a></li> -->
         <li class="menu-li" style="float:right">
             <a id="sair" href="../../controller/logout.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Sair</a>
         </li>
