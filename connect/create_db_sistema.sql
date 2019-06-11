@@ -28,9 +28,6 @@ INSERT INTO usuario (nome, email, senha, usuario_tipo) VALUES ('Samuel','samuel.
 INSERT INTO usuario (nome, email, senha, usuario_tipo) VALUES ('Administrador','admin@admin.com', md5('123456'), 'A');
 INSERT INTO usuario (nome, email, senha, usuario_tipo) VALUES ('Samuel Morais','samuel.moraisbsb@gmail.com', md5('samuel123'), 'U');
 
-INSERT INTO respostas (id_pergunta, respostas) VALUES ('12','Que nada vc e burro so acho kkkkk');
-
-alter table respostas DROP COLUMN respostas;
 
 ALTER TABLE perguntas RENAME COLUMN pergunta TO no_pergunta;
 

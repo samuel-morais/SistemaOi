@@ -3,7 +3,7 @@
   <nav id="sidebar">
     <div class="sidebar-header">
         <h3>Sistema OI</h3>
-      <img src="../images/logo_oi.png" alt="" width="90">
+      <img src="../images/Logo_oi.png" alt="" width="100">
     </div>
     
     <ul class="list-unstyled components">

@@ -1,21 +1,29 @@
 <?php
 
-$hostname ="localhost";
-$user = "root";
-$password = "";
-$database = "base_oi";
-$conn = mysqli_connect($hostname, $user, $password, $database);
+class Connectdb 
+    {
+    private $host= 'localhost';
+    private $usuario = 'root';
+    private $pass= '';
+    private $db_name= 'base_oi';
+    private $conn;
 
-if(!$conn){
-	echo "Falha na conexão com o banco de dados";
+    public function __construct()
+    {
+        $this->conn = mysqli_connect($this->host, $this->usuario, $this->pass) 
+        or die('Falha na conexão'. mysqli_connect_error($this->conn));
 
-mysql_query("SET NAMES 'utf8'");
-mysql_query('SET character_set_connection=utf8');
-mysql_query('SET character_set_client=utf8');
-mysql_query('SET character_set_results=utf8');
+        mysqli_select_db($this->conn,$this->db_name) 
+        or die('Falha ao selecionar banco'. mysqli_connect_error($this->conn));
+    }
 
+    public function getConn()
+    {
+        return $this->conn;
+    }
 }
 
+var_dump($db_name);
 
 ?>
 
