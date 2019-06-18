@@ -1,6 +1,7 @@
 <?php 
 
 require '../connect/userDAO.php';
+require '../connect/form_DAO.php';
 
 $action = $_POST['action'];
 
@@ -12,6 +13,11 @@ switch ($action) {
         $email = $_POST['email'];
         $senha = $_POST['senha'];
         $model->inserirUser($nome, $email, $senha);
+    break;
+
+    case 'consultasForm':
+        $consultas = $_POST['consul_web'];
+        $model->consultasForm($consultas);
     break;
 
      case 'inserirUserAdmin':

@@ -1,12 +1,6 @@
 <?php
 
-$servidor ="localhost";
-$usuario = "root";
-$senha = "";
-$dbname = "base_oi";
-
-$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
-
+require '../connect/form_DAO.php';
 
 
 ?>
@@ -27,7 +21,7 @@ $conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
 
     	<tr>
     <form method="POST" action="consultas.php">
-    <td><font face="Arial" size="2"><b></b></font></td><td><input type="text" name="consul_web" maxlength="12" size="13">
+    <td><font face="Arial" size="2"><b></b></font></td><td><input type="text" name="consul_web" id="consul_web"maxlength="12" size="13">
     <input type="submit" value=" Ok "></td>
     </form>
     <br>

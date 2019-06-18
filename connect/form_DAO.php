@@ -20,39 +20,27 @@ class Form{
     }
 
     public function consultasForm($id_circuito, $circuito, $velocidade, $valor_contrato)
-    {
-        if (empty($senha)) {
-            echo json_encode(['type' => 'error', 'msg' => 'Senha em branco']);
-            exit;
-        }
-
-        $this->nome = $nome;
-        $this->email = $email;
-        $this->senha = md5($senha);
-        $this->usuario_tipo = 'A';
-
-        $existeEmail = "SELECT * FROM usuario WHERE email = '{$this->email}';";
-        $query = mysqli_query($this->conexao->getConn(), $existeEmail);
-        $existe = mysqli_fetch_assoc($query);
-
-        if ($existe) {
-            echo json_encode(['type' => 'error', 'msg' => 'Usuário já está cadastrado']);
-            exit;
-        }
-
-        $sql = "INSERT INTO usuario (nome, email, senha, usuario_tipo) VALUES ('{$this->nome}','{$this->email}','{$this->senha}', '{$this->usuario_tipo}');";
-        $result = mysqli_query($this->conexao->getConn(), $sql);
+  
+        $this->id_circuito = $id_circuito;
+        $this->circuito = $circuito;
+        $this->velocidade = $velocidade;
+        $this->valor_contrato = $valor_contrato;
         
-        if ($result) {
-            echo json_encode(['type' => 'success', 'msg' => 'Usuário inserido com sucesso']);
+       /* $existeCircuito = "SELECT * FROM inventario_oi WHERE circuito = '{$this->circuito}';";
+        $query = mysqli_query($this->conexao->getConn(), $existeCircuito);
+        $existe = mysqli_fetch_assoc($query);
+0
+        if ($existe) {
+            echo json_encode(['type' => 'error', 'msg' => 'Circuito já está cadastrado']);
             exit;
-        } else {
-            echo json_encode(['type' => 'error', 'msg' => 'Erro ao inserir usuário']);
-            exit;
-        }
-    }
+        }*/
+ 
+        //$sql = "INSERT INTO inventario_oi (id_circuito, circuito, velocidade, valor_contrato) VALUES ('{$this->id_circuito}','{$this->circuito}','{$this->velocidade}', '{$this->valor_contrato}');";
+        
+		$sql = "SELECT id_circuito, circuito, velocidade,valor_contrato FROM inventario_oi 
+	    WHERE circuito = 1  VALUES ('{$this->id_circuito}','{$this->circuito}','{$this->velocidade}', '{$this->valor_contrato}');";
+ 
+        $result = mysqli_query($this->conexao->getConn(), $sql);
 
-
-}
 
  ?>
