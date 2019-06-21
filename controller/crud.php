@@ -15,10 +15,6 @@ switch ($action) {
         $model->inserirUser($nome, $email, $senha);
     break;
 
-    case 'consultasForm':
-        $consultas = $_POST['consul_web'];
-        $model->consultasForm($consultas);
-    break;
 
      case 'inserirUserAdmin':
         $nome = $_POST['nome'];

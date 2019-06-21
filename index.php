@@ -23,21 +23,18 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/toastr/jquery.toast.min.css">
 <!--===============================================================================================-->
-
 </head>
 <body>
 	
 <!--===============================================================================================-->
 							<!-- LOGIN-->
 <!--===============================================================================================-->
-
 <div id="login" class="limiter">
 	<div class="container-login100">
 		<div class="wrap-login100">
 			<!-- <div class="login100-pic js-tilt" data-tilt> -->
 				<!-- <img src="images/323.jpg" alt="IMG"> -->
 			<!-- </div> -->
-
 			<form id="form-login" class="login100-form validate-form" action="controller/autentica.php" method="POST">
 				<span class="login100-form-title">
 					Login
@@ -75,18 +72,15 @@
 		</div>
 	</div>
 </div>
-
 <!--===============================================================================-->
 					<!-- CADASTRO -->
 <!--===============================================================================-->
-
 <div id="cadastro" class="limiter" style="display:none;">
 	<div class="container-login100">
 		<div class="wrap-login100">
 			<!-- <div class="login100-pic js-tilt" data-tilt> -->
 				<!-- <img src="images/323.jpg" alt="IMG"> -->
 			<!-- </div> -->
-
 			<form id="form-cadastro" class="login100-form validate-form" action="" method="POST">
 				<input type="hidden" name="action">
 				<span class="login100-form-title">
@@ -126,7 +120,6 @@
 		</div>
 	</div>
 </div>
-
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -141,14 +134,10 @@
 	<script src="vendor/toastr/jquery.toast.min.js"></script>
 <!--===============================================================================================-->
 	<script>
-
-
 			$('#form-login').unbind('submit').submit(function(e) {
 				e.preventDefault();
-
 				let email = $('#email').val();
 				let senha = $('#senha').val();
-
 				if (!email){
 				return message('error', 'Campo Email vazio!');
 				}
@@ -176,16 +165,13 @@
 					}
 				})				
 			});
-
 			$('#form-cadastro').unbind('submit').submit(function(e) {
 				e.preventDefault();
 				
 				$('[name="action"]').val('inserirUser');
-
 				let nome = $('#nome').val();
 				let email = $('#cad-email').val();
 				let senha = $('#cad-senha').val();
-
 				if (!nome){
 				return message('error', 'Campo Nome vazio!');
 				}
@@ -195,7 +181,6 @@
 				if (!senha){
 				return message('error', 'Campo Senha vazio!');
 				}
-
 				$.ajax({
 					method:'POST',
 					url: 'controller/crud.php',
@@ -215,19 +200,16 @@
 					}
 				})
 			});
-
 		$('#nova-conta').unbind('click').click(function() {
 			$('#login').css('display', 'none');
 			$('#cadastro').css('display', 'block');
 			$('.alert-danger').css('display', 'none');
 		});
-
 		$('#realiza-login').unbind('click').click(function() {
 			$('#cadastro').css('display', 'none');
 			$('#login').css('display', 'block');
 		});
 	</script>
 	<script src="js/main.js"></script>
-
 </body>
 </html>
