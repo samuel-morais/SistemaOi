@@ -23,7 +23,7 @@ class Connectdb
     }
 }
 
-var_dump($db_name);
+
 
 ?>
 
