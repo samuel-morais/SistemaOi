@@ -6,15 +6,15 @@ class Form
  {
 
 
-	private $conexao;
-	private $id_circuito;
-	private $circuito;
-	private $velocidade;
-	private $valor_contrato;
+    private $conexao;
+    private $id_circuito;
+    private $circuito;
+    private $velocidade;
+    private $valor_contrato;
 
 
 
-	public function __construct()
+    public function __construct()
     {
         $this->conexao = new Connectdb();
 
@@ -39,8 +39,12 @@ class Form
  
         //$sql = "INSERT INTO inventario_oi (id_circuito, circuito, velocidade, valor_contrato) VALUES ('{$this->id_circuito}','{$this->circuito}','{$this->velocidade}', '{$this->valor_contrato}');";
         
+
 		$sql = "SELECT id_circuito, circuito, velocidade,valor_contrato FROM inventario_oi 
 	    WHERE id_circuito = 1  VALUES ('{$this->id_circuito}','{$this->circuito}','{$this->velocidade}', '{$this->valor_contrato}');";
+
+        $sql = "SELECT id_circuito, circuito, velocidade,valor_contrato FROM inventario_oi 
+        WHERE id_circuito = 1  VALUES ('{$this->id_circuito}','{$this->circuito}','{$this->velocidade}', '{$this->valor_contrato}');";
  
         $result = mysqli_query($this->conexao->getConn(), $sql);
 
