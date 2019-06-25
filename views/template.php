@@ -53,7 +53,7 @@
     <div id="tab-cadastro-msg" style="display:none;">
         <p class="text-p">Cadastrar Dados</p>
         <div class="container-fluid">
-            <form id="form-cad-msg" class="container" id="needs-validation" method="POST" action="cad_form.php">
+            <form id="form-cad-msg" class="container" id="needs-validation" method="POST" action="" >
                 <input type="hidden" name="id_usuario" value="<?php echo $_SESSION['user']['id_usuario']; ?>">
                 <input type="hidden" name="action" value="">
                 <!-- <div id="msg-valida"></div> -->
@@ -68,10 +68,10 @@
                 <table >
                 
                 <tr><td align="right" >Circuito *</td><td>
-                    <input type="text" name="circuito" id="circuito" required maxlength="11">
+                    <input type="text" name="circuito" required maxlength="11">
 
                 </td><td align="right" >Motivo ísentos * </td><td>
-                        <select name="select" id="movivo_isentos" size="1">
+                        <select name="motivo_isentos" size="1">
                             <option value="SELECIONE">Selecione</option>
 
                                         <option value="motivo1">ACESSO RETIRADO</option>
@@ -86,10 +86,10 @@
                                     </select></td></tr>
             
             <tr><td align="right" >Número Logico *</td><td>
-                <input type="text" name="numero_logico" id="numero_logico"  maxlength="11" ></td>
+                <input type="text" name="numero_logico" maxlength="11" ></td>
             
             <td align="right" >Acesso Associado</td><td>
-                <input type="text" name="acesso_associado" id="acesso_associado"maxlength="11" ></td></tr>
+                <input type="text" name="acesso_associado" maxlength="11" ></td></tr>
             
             <tr><td align="right" >Chave DDD *</td><td>
                 <input type="text" name="chave_ddd " id="chave_ddd"  maxlength="11" ></td>
@@ -253,16 +253,15 @@
         <center><input type=button value=" Voltar " OnClick="history.back()"></center>
     </div>
      <div id="#tab-form" style="display:none;">
-        ]
      </div> 
 
 <?php 
 
-if(isset($_POST['circuito']));
+if(isset($_POST['circuito$']))
 {
 
     $circuito = addcslashes($_POST['circuito']);
-    $motivo_isentos= addcslashes($_POST['motivo_isentos']);
+    $motivo_isentos = addcslashes($_POST['motivo_isentos']);
     $numero_logico = addcslashes($_POST['numero_logico']);
     $acesso_associado = addcslashes($_POST['acesso_associado']);
     //verificar se está preenchido 
@@ -271,7 +270,15 @@ if(isset($_POST['circuito']));
         $form->conectardb("base_oi","localhost","root", "");
         if($form->msgErro == "")// tudo ok
         {
-            $form->cadastrarForm($circuito,$motivo_isentos,$numero_logico,$acesso_associado);
+            if($form->cadastrarForm($circuito,$motivo_isentos,$numero_logico,$acesso_associado))
+            {
+
+                echo "Cadastrado com sucesso!";
+            }
+            else
+            {
+                echo "Circuito já cadastrado!";
+            }
         }
         else
         {
@@ -487,8 +494,7 @@ if(isset($_POST['circuito']));
                     "positionClass": "toast-top-center",
                 }
             }
-            //EXIBE MENSAGEM
-            Command:toastr[type]('<strong>'+msg+'</strong>');
+        
         }
 
     // CAMPO VISUALIZAR SENHA (MEU PERFIL)
