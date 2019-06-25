@@ -7,7 +7,7 @@
 
     $model = new UserDAO();
 
-    $dados = $model->grid();
+
 
     $usuarios = $model->gridUsuario();
 

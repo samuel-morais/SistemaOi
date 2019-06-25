@@ -55,7 +55,6 @@
     }
 
 
-
     public function consultar($consultar)
     {
 

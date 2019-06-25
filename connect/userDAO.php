@@ -129,31 +129,6 @@ class UserDAO
     
 
 
-    public function grid()
-    {
-        $sql  = " SELECT * FROM perguntas";
-        $result = mysqli_query($this->conexao->getConn(), $sql) or die ('<script>alert("Falha ao editar o registro")</script>');
-        
-        $dados = array();
-        while ($row = $result->fetch_assoc()) {
-                $dados[] = $row;
-        }
-
-        foreach ($dados AS $key => $pergunta) {
-            $dados[$key]['no_respostas'] = $this->getRespostasByPergunta($pergunta['id_pergunta']);
-        }
-
-        return $dados;
-
-        if ($dados) {
-            echo json_encode(['type' => 'success', 'msg' => 'Editado com sucesso', 'dados' => $dados]);
-            exit;
-        } else {
-            echo json_encode(['type' => 'error', 'msg' => 'Erro ao tentar editar Pergunta']);
-            exit;
-        }
-    }
-
 
     public function gridUsuario()
     {

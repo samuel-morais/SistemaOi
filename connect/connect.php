@@ -5,7 +5,7 @@ class Connect
     private $server = 'localhost';
     private $user = 'root';
     private $password = '';
-    private $bank = 'login_teste';
+    private $bank = 'login_sistema';
     private $conn;
 
     public function __construct()
