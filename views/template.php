@@ -1,4 +1,8 @@
 <?php 
+    require_once'../connect/connect_form.php';
+    
+    $form = new Cad_form;
+    
     require '../connect/userDAO.php';
 
     $model = new UserDAO();
@@ -15,6 +19,10 @@
 
     $usuarioTipo = '';
     //var_dump($usuarioTipo); 
+
+    
+
+
 ?>
 
 <!DOCTYPE html>
@@ -63,7 +71,7 @@
                     <input type="text" name="circuito" id="circuito" required maxlength="11">
 
                 </td><td align="right" >Motivo ísentos * </td><td>
-                        <select name="select" id="select_isentos" size="1">
+                        <select name="select" id="movivo_isentos" size="1">
                             <option value="SELECIONE">Selecione</option>
 
                                         <option value="motivo1">ACESSO RETIRADO</option>
@@ -248,7 +256,38 @@
         ]
      </div> 
 
+<?php 
 
+if(isset($_POST['circuito']));
+{
+
+    $circuito = addcslashes($_POST['circuito']);
+    $motivo_isentos= addcslashes($_POST['motivo_isentos']);
+    $numero_logico = addcslashes($_POST['numero_logico']);
+    $acesso_associado = addcslashes($_POST['acesso_associado']);
+    //verificar se está preenchido 
+    if(!empty($circuito) && !empty($motivo_isentos) && !empty($numero_logico) && !empty($acesso_associado))
+    {
+        $form->conectardb("base_oi","localhost","root", "");
+        if($form->msgErro == "")// tudo ok
+        {
+            $form->cadastrarForm($circuito,$motivo_isentos,$numero_logico,$acesso_associado);
+        }
+        else
+        {
+            echo "Erro: ".$form->msgErro;
+        }
+    }else{
+
+        echo "Preencha todos os campos !";
+
+    }
+}
+
+
+
+
+?>
 
 
         <!-- /.container -->
