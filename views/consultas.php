@@ -1,9 +1,10 @@
 <?php
 
-    require_once'../connect/connect_form.php';
-    
-    $model = new Cad_form;
+    require '../connect/form_DAO.php';
 
+    $model = new Form();
+
+    $consultas = $model->consultasForm('id_circuito', 'circuito', 'velocidade', 'valor_contrato');
 
     session_start();    
 

@@ -129,7 +129,6 @@ class UserDAO
     
 
 
-
     public function gridUsuario()
     {
         $sql = "SELECT * FROM usuario;";

@@ -7,8 +7,6 @@
 
     $model = new UserDAO();
 
-
-
     $usuarios = $model->gridUsuario();
 
     session_start();    

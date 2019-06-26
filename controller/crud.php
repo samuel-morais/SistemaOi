@@ -32,9 +32,41 @@ switch ($action) {
         $model->editarUser($id, $nome, $email, $senha, $senhaAntiga);
     break;
 
+    case 'inserirMsg':
+        $idUsuario = $_POST['id_usuario'];
+        $pergunta = $_POST['pergunta'];
+        $model->inserirMsg($idUsuario, $pergunta);
+    break;
+
+    case 'inserirResp':
+        $idPergunta = $_POST['id_pergunta'];
+        $idUsuario = $_POST['id_usuario'];
+        $resposta = $_POST['respostas'];
+        $model->inserirResp($idPergunta, $idUsuario, $resposta);
+    break;
+    
+    case 'editarMsg':
+        $id = $_POST['id'];
+        $pergunta = $_POST['pergunta'];
+        $model->editarMsg($id, $pergunta);
+    break;
+
+    case 'excluirMsg':
+        $id = $_POST['id'];
+        $model->excluirMsg($id);
+    break;
+
+    case 'excluirResp':
+        $id = $_POST['id'];
+        $model->excluirResp($id);
+    break;
+
     case 'excluirUser':
         $id = $_POST['id'];
         $model->excluirUser($id);
     break;
 
+    case 'gridPergunta':
+        $model->grid();
+    break;
 }
