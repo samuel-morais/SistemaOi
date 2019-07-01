@@ -32,7 +32,8 @@ $cad = new Cad_form("base_oi","localhost","root","");
 			else
 			{
 				echo "Preencha todos os campos !";
-			}
+		
+	}
  	
 ?>
 	
@@ -112,7 +113,7 @@ if(isset($_GET['id_up']))
 </html>
 <?php 
 	
-	if(isset($_GET['id_circuito	']))
+	if(isset($_GET['id_circuito']))
 	{
 		$id_cad_circuito = addslashes($_GET['id_circuito']);
 		$cad->excluirForm($id_cad_circuito);

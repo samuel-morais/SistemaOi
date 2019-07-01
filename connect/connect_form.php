@@ -74,7 +74,7 @@ Class Cad_form{
         $cmd = $this->pdo->prepare("SELECT * FROM inventario_oi WHERE id_circuito = :id");
         $cmd->bindValue(":id",$id_circuito);
         $cmd->execute();
-        $res = $cmd->fetchAll(PDO::FETCH_ASSOC);
+        $res = $cmd->fetch(PDO::FETCH_ASSOC);
         return $res;
     }
 
