@@ -9,7 +9,7 @@
     <ul class="list-unstyled components">
         <hr style="background-color: white;">
         <li>
-            <a href="#tab-cadastro-msg"><i class="fa fa-plus" aria-hidden="true"></i> Cadastrar</a>
+            <a href="cad_form.php"><i class="fa fa-plus" aria-hidden="true"></i> Cadastrar</a>
         </li>
    
           <li>

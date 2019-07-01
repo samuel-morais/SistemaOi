@@ -1,87 +1,87 @@
 <?php
 
- class Cad_form{
-
+Class Cad_form{
     private $pdo;
-    public $msgErro = "";
+    
 
-    public function conectardb($db_name, $host, $usuario, $pass)
-    {
+    public function __construct($dbname, $host, $user, $senha)
+    {   
 
-        global $pdo;
         try {
-        
-            $pdo = new PDO("msql:dbname=".$db_name.";host=".$host,$usuario,$pass);
 
-        } catch (PDOException $e) {
-   
-            $msgErro = $e->getMessage();          
+            $this->pdo = new PDO("mysql:dbname=".$dbname.";host=".$host,$user,$senha);
+        
+             } 
+    
+         catch (PDOException $e) {
+         echo "Erro com a  conexão do banco de dados". $e->getMessage();
+            exit();
         }
-        
 
+         catch (Exception $e) {
+         echo "Erro generico com a  conexão do banco de dados". $e->getMessage();
+            
+           exit();
+        }
+      }
+
+    public function getDados()
+    {
+        $res = array();
+        $cmd = $this->pdo->query("SELECT * FROM inventario_oi ORDER BY circuito");
+        $res = $cmd->fetchAll(PDO::FETCH_ASSOC);
+        return $res;
 
     }
- 
 
-    public function cadastrarForm($circuito,$motivo_isentos,$numero_logico,$acesso_associado)
-    {
-        global $pdo;
-        //verificar se já circuito cadastrado
-        $sql =$pdo->prepare("SELECT id_circuito from inventario_oi  WHERE circuito = :c");
-        $sql->bindValue(":c",$circuito);
-        $sql->execute();
+    //FUNÇÃO CADASTRAR CIRCUITO
+    public function cadastrarForm($circuito,$velocidade,$valor_contrato,$numero_logico)
     
-        if($sql->rowCount() > 0)
+    //antes de cadastrar verificar se tem um circuito cadastrado
+
+    {
+        $cmd = $this->pdo->prepare("SELECT id_circuito FROM inventario_oi WHERE circuito = :c");
+        $cmd->bindValue(":c","$circuito");
+        $cmd->execute();
+        if($cmd->rowCount() >0)
         {
             return false;
-        }
 
-        else {
-
-            //caso nao, Cadastrar     
-            $sql= $pdo->prepare("INSERT INTO inventario_oi (circuito, motivo_isentos, numero_logico, acesso_associado) VALUES(:c, :m, :n, :a)");
-
-            $sql->bindValue(":c",$circuito);
-            $sql->bindValue(":m",$motivo_isentos);
-            $sql->bindValue(":n",$numero_logico);
-            $sql->bindValue(":a",$acesso_associado);
-            $sql->execute();
-
+        }else //Não foi encontrado o circuito
+     
+        {
+            $cmd =$this->pdo->prepare("INSERT INTO inventario_oi(circuito,velocidade,valor_contrato,numero_logico) VALUES(:circuito, :velocidade, :valor_contrato, :numero_logico)");
+            $cmd->bindValue(":circuito","$circuito");
+            $cmd->bindValue(":velocidade","$velocidade");
+            $cmd->bindValue(":valor_contrato","$valor_contrato");
+            $cmd->bindValue(":numero_logico","$numero_logico");
+            $cmd->execute();
             return true;
         }
+    }
 
-        
+    public function excluirForm($id_circuito)
+    {
+    $cmd = $this->pdo->prepare("DELETE FROM inventario_oi WHERE id_circuito = :id");
+    $cmd->bindValue(":id",$id_circuito);
+    $cmd->execute();
 
     }
 
+    public function buscarDadosCircuito($id_circuito)
+    {
+        $res = array();
+        $cmd = $this->pdo->prepare("SELECT * FROM inventario_oi WHERE id_circuito = :id");
+        $cmd->bindValue(":id",$id_circuito);
+        $cmd->execute();
+        $res = $cmd->fetchAll(PDO::FETCH_ASSOC);
+        return $res;
+    }
 
-
-    public function consultar($consultar)
+    public function atualizarDados()
     {
 
-         global $pdo;
-         $sql= $pdo->prepare("SELECT circuito, velocidade,valor_contrato FROM inventario_oi  WHERE id_circuito = 1 VALUES($circuito, $motivo_isentos, $numero_logico,$acesso_associado)");
-         $sql->bindValue(":c",$circuito);
-         $sql->bindValue(":v",$velocidade);
-         $sql->bindValue(":valor_contrato",$valor_contrato);
-         $sql->execute();
-         
-         if($sql->rowCount() > 0)
-         
-         {
-            //RECEBER DADOS DO ID pelo ARRAY
-            $dado = $sql->fetch();
-            session_start();
-            $_SESSION['id_circuito'] = $dado['id_circuito'];
-            
-            return true;             
-         }
-         else
-         {
-            return false;
-         }
-     }
+    }
 }
-
- ?>
+?>
 
