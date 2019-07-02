@@ -14,32 +14,75 @@ $cad = new Cad_form("base_oi","localhost","root","");
 </head>
 <body>
 	<?php 
-	if(isset($_POST['circuito']))
+	if(isset($_POST['circuito'])) //clicou no botão cadastrar ou no editar
 	{
-		$circuito = addslashes($_POST['circuito']);
-		$velocidade = addslashes($_POST['velocidade']);
-		$valor_contrato = addslashes($_POST['valor_contrato']);
-		$numero_logico = addslashes($_POST['numero_logico']);
-		if(!empty($circuito) && !empty($velocidade) && !empty($valor_contrato) && !empty($numero_logico))
-			//cadastrar
-			if(!$cad->cadastrarForm($circuito,$velocidade,$valor_contrato,$numero_logico))
-			{
-	
-				echo "Circuito Já esta cadastrado !";
-			}
+		///// EDITAR /////////////
+		if(isset($_GET['id_up']) && !empty($_GET['id_up']))
+		{
+			$id_upd = addslashes($_GET['id_up']);
+			$circuito = addslashes($_POST['circuito']);
+			$velocidade = addslashes($_POST['velocidade']);
+			$valor_contrato = addslashes($_POST['valor_contrato']);
+			$numero_logico = addslashes($_POST['numero_logico']);
+			if(!empty($circuito) && !empty($velocidade) && !empty($valor_contrato) && !empty($numero_logico))
+			   {
+				//Editar ou ATUALIZAR
+				$cad->atualizarDados($id_upd,$circuito,$velocidade,$valor_contrato,$numero_logico);
+				header("location: cad_form.php");
 
-			}
-			else
-			{
-				echo "Preencha todos os campos !";
-		
-	}
- 	
+				}
+				else
+				{
+					?>
+					 <div class ="aviso">
+					 	<img src="aviso.png">
+						<h4>Preencha todos os campos !</h4>
+					 </div>
+
+					<?php 
+				}
+		}		
+
+		///// CADASTRAR/////////////
+		else
+		{
+			$circuito = addslashes($_POST['circuito']);
+			$velocidade = addslashes($_POST['velocidade']);
+			$valor_contrato = addslashes($_POST['valor_contrato']);
+			$numero_logico = addslashes($_POST['numero_logico']);
+			if(!empty($circuito) && !empty($velocidade) && !empty($valor_contrato) && !empty($numero_logico))
+			   {
+				//cadastrar
+				if(!$cad->cadastrarForm($circuito,$velocidade,$valor_contrato,$numero_logico))
+				{
+					?>
+					 <div class ="aviso">
+					 	<img src="aviso.png">
+						<h4>Circuito Já esta cadastrado !</h4>
+					 </div>
+
+					<?php 
+				}
+
+				}
+				else
+				
+				{	
+				 	?>
+						 <div class ="aviso">
+					 	 <img src="aviso.png">
+							<h4>Preencha todos os campos !</h4>
+						 </div>
+					<?php 
+				}
+		} 
+
+		 }
 ?>
 	
 
 <?php 
-if(isset($_GET['id_up']))
+if(isset($_GET['id_up'])) //SE A PESSOA CLICOU EM EDITAR
 	{
 		$id_update = addslashes ($_GET['id_up']);
 		$res = $cad->buscarDadosCircuito($id_update);
@@ -95,18 +138,24 @@ if(isset($_GET['id_up']))
  			<a href="cad_form.php?id_up=<?php echo $dados[$i]['id_circuito'];?>">Editar</a
  			><a href="cad_form.php?id_circuito=<?php echo $dados[$i]['id_circuito'];?>">Excluir </a>
 		</td>
-		 		<?php 
+		 		<?php
 		 			echo "</tr>";
 		 		}		 		
 		 		 
-		  }
-		  else //o banco esta vazio
-		  {
-		  	echo "Ainda não há circuito cadastrado";
-		  }
-		?>
-		
+	  }
+	  else //o banco esta vazio
+	  {
+		  ?>
 		</table>
+		 
+	  		<div class="aviso">
+	  			<h4>Ainda não há circuito cadastrado</h4>
+	  		</div>
+	  	
+	  		<?php 
+
+	  }
+		?>
 		
 	</section>
 </body>

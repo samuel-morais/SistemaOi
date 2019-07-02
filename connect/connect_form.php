@@ -78,10 +78,20 @@ Class Cad_form{
         return $res;
     }
 
-    public function atualizarDados()
-    {
+    public function atualizarDados($id_circuito,$circuito,$velocidade,$valor_contrato,$numero_logico)
+     {
 
-    }
-}
+        $cmd = $this->pdo->prepare("UPDATE inventario_oi SET circuito = :circuito, velocidade = :velocidade, valor_contrato = :valor_contrato, numero_logico = :numero_logico WHERE id_circuito =:id");
+        $cmd->bindValue(":circuito",$circuito);
+        $cmd->bindValue(":velocidade",$velocidade);
+        $cmd->bindValue(":valor_contrato",$valor_contrato);
+        $cmd->bindValue(":numero_logico",$numero_logico);
+        $cmd->bindValue(":id",$id_circuito);
+        $cmd->execute();
+  
+     } 
+
+ }
+
 ?>
 
