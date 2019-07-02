@@ -34,12 +34,13 @@ $cad = new Cad_form("base_oi","localhost","root","");
 				else
 				{
 					?>
-					 <div class ="aviso">
-					 	<img src="aviso.png">
-						<h4>Preencha todos os campos !</h4>
-					 </div>
-
-					<?php 
+		 
+			  		<div class="aviso">
+			  			<img src= "../images/aviso.png">
+			  			<h4>Preencha todos os campos !</h4>
+			  		</div>
+			  	
+			  		<?php 			
 				}
 		}		
 
@@ -55,27 +56,32 @@ $cad = new Cad_form("base_oi","localhost","root","");
 				//cadastrar
 				if(!$cad->cadastrarForm($circuito,$velocidade,$valor_contrato,$numero_logico))
 				{
-					?>
-					 <div class ="aviso">
-					 	<img src="aviso.png">
-						<h4>Circuito Já esta cadastrado !</h4>
-					 </div>
 
-					<?php 
+					?>
+		 
+			  		<div class="aviso">
+			  			<img src= "../images/aviso.png">
+			  			<h4>Circuito Já esta cadastrado !</h4>
+			  		</div>
+			  	
+			  		<?php 		
 				}
 
 				}
 				else
 				
 				{	
-				 	?>
-						 <div class ="aviso">
-					 	 <img src="aviso.png">
-							<h4>Preencha todos os campos !</h4>
-						 </div>
-					<?php 
+					?>
+		 
+			  		<div class="aviso">
+			  			<img src= "../images/aviso.png">
+			  			<h4>Preencha todos os campos !</h4>
+			  		</div>
+			  	
+			  		<?php 			
+				
 				}
-		} 
+			} 
 
 		 }
 ?>
@@ -138,25 +144,25 @@ if(isset($_GET['id_up'])) //SE A PESSOA CLICOU EM EDITAR
  			<a href="cad_form.php?id_up=<?php echo $dados[$i]['id_circuito'];?>">Editar</a
  			><a href="cad_form.php?id_circuito=<?php echo $dados[$i]['id_circuito'];?>">Excluir </a>
 		</td>
-		 		<?php
-		 			echo "</tr>";
-		 		}		 		
+		 	<?php
+		 		echo "</tr>";
+		 	}		 		
 		 		 
 	  }
 	  else //o banco esta vazio
 	  {
-		  ?>
+		?>
 		</table>
 		 
-	  		<div class="aviso">
-	  			<h4>Ainda não há circuito cadastrado</h4>
-	  		</div>
+	  	<div class="aviso">
+	  		<h4>Ainda não há circuito cadastrado !</h4>
+	  	</div>
 	  	
-	  		<?php 
+	  	<?php 
 
 	  }
+	
 		?>
-		
 	</section>
 </body>
 </html>
