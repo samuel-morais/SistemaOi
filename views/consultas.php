@@ -1,12 +1,7 @@
 <?php
 
-    require '../connect/form_DAO.php';
-
-    $model = new Form();
-
-    $consultas = $model->consultasForm('id_circuito', 'circuito', 'velocidade', 'valor_contrato');
-
-    session_start();    
+   require_once'../connect/connect_form.php';
+   $cad = new Cad_form("base_oi","localhost","root","");
 
     //var_dump($usuarioTipo); 
 
@@ -18,6 +13,7 @@
 	 <html>
         <head>
      		<title> CONSULTAS </title>
+            <link rel="stylesheet" href="../css/consulta.css">
     	</head>
 	<body>
     	<hr>
@@ -31,8 +27,15 @@
     <td><font face="Arial" size="6"><b></b></font></td><td><input type="text" name="consul_web" id="consul_web"maxlength="12" size="15">
     <input type="submit" value=" CONSULTAR "></td>
     </form>
-    <br>
-    	<center><input type=button value=" VOLTAR " OnClick="history.back()"></center>
-    <hr>
+ 
+    <section id=result_pesquisa>
+        <table>
+            <tr id="titulo">
+                <td>CIRCUITO</td>
+                <td>VELOCIDADE</td>
+                <td>VALOR DO CONTRATO</td>
+                <td colspan="2">NÚMERO LOGICO</td>
+            </tr>
     </body>
     </html>
+   
