@@ -24,10 +24,57 @@ $cad = new Cad_form("base_oi","localhost","root","");
 			$velocidade = addslashes($_POST['velocidade']);
 			$valor_contrato = addslashes($_POST['valor_contrato']);
 			$numero_logico = addslashes($_POST['numero_logico']);
-			if(!empty($circuito) && !empty($velocidade) && !empty($valor_contrato) && !empty($numero_logico))
+			$chave_dd = addslashes($_POST['chave_dd']);
+			$chave_caixa = addslashes($_POST['chave_caixa']);
+			$contrato_caixa = addslashes($_POST['contrato_caixa']);
+			$contrato_oi = addslashes($_POST['contrato_oi']);
+			$observacao = addslashes($_POST['observacao']);
+			$motivos_isentos = addslashes($_POST['motivos_isentos']);
+			$acesso_associado = addslashes($_POST['acesso_associado']);
+			$oficio_solicitacao = addslashes($_POST['oficio_solicitacao']);
+			$data_homologacao = addslashes($_POST['data_homologacao']);
+			$circuito_base_cliente = addslashes($_POST['circuito_base_cliente']);
+			$numero_atividade = addslashes($_POST['numero_atividade']);
+			$cgc_filial = addslashes($_POST['cgc_filial']);
+			$gerenciado = addslashes($_POST['gerenciado']);
+			$regiao = addslashes($_POST['regiao']);
+			$site = addslashes($_POST['site']);
+			$uf = addslashes($_POST['uf']);
+			$ciclo = addslashes($_POST['ciclo']);
+			$local_lit_local = addslashes($_POST['local_lit_local']);
+			$dia_vencimento =  addslashes($_POST['dia_vencimento']);
+			$dt_instalacao = addslashes($_POST['dt_instalacao']);
+			$chavecpct = addslashes($_POST['chavecpct']);
+			$ddd_codigo_regiao = addslashes($_POST['ddd_codigo_regiao']);
+			$ccus = addslashes($_POST['ccus']);
+			$produtos_dados_tipo_circuito = addslashes($_POST['produtos_dados_tipo_circuito']);
+			$designacao_dados = addslashes($_POST['designacao_dados']);
+			$degrau_tarif_degrau = addslashes($_POST['degrau_tarif_degrau']);
+			$cnpj_titular = addslashes($_POST['cnpj_titular']);
+			$tp_ccus = addslashes($_POST['tp_ccus']);
+			$data_retirada = addslashes($_POST['data_retirada']);
+			$cnpj_usuario = addslashes($_POST['cnpj_usuario']);
+			$local_num = addslashes($_POST['local_num']);
+			$categoria = addslashes($_POST['categoria']);
+			$cj_nao_tem_rii = addslashes($_POST['cj_nao_tem_rii']);
+			$situacao = addslashes($_POST['situacao']);
+			$r_social_titular = addslashes($_POST['r_social_titular']);
+			$contrato = addslashes($_POST['contrato']);
+			$su_nao_tem_RII = addslashes($_POST['su_nao_tem_RII']);
+			$agrupador = addslashes($_POST['agrupador']);
+			$ativo_inativo = addslashes($_POST['ativo_inativo']);
+			$servicos = addslashes($_POST['servicos']);
+			$descricao_produto_sisraf = addslashes($_POST['descricao_produto_sisraf']);
+			$ciclo_1 = addslashes($_POST['ciclo_1']);
+			$ae = addslashes($_POST['ae']);
+			$terminal_anterior_ficticio    = addslashes($_POST['terminal_anterior_ficticio']);
+			$ponta_a = addslashes($_POST['ponta_a']);
+			$ponta_b = addslashes($_POST['ponta_b']);
+
+			if(!empty($circuito) && !empty($velocidade) && !empty($valor_contrato) && !empty($numero_logico) && !empty($chave_dd) && !empty($chave_caixa) && !empty($contrato_caixa) && !empty($contrato_oi) && !empty($observacao) && !empty($motivos_isentos) && !empty($acesso_associado) && !empty($oficio_solicitacao) && !empty($data_homologacao) && !empty($circuito_base_cliente) && !empty($numero_atividade) && !empty($cgc_filial) && !empty($gerenciado) && !empty($regiao) && !empty($site) && !empty($uf) && !empty($ciclo) && !empty($local_lit_local) && !empty($dia_vencimento) && !empty($dt_instalacao) && !empty($chavecpct) && !empty($ddd_codigo_regiao) && !empty($ccus) && !empty($produtos_dados_tipo_circuito) && !empty($designacao_dados) && !empty($degrau_tarif_degrau) && !empty($cnpj_usuario) && !empty($local_num) && !empty($categoria) && !empty($cj_nao_tem_rii) &&!empty($agrupador) && !empty($ativo_inativo) && !empty($servicos) && !empty($descricao_produto_sisraf) && !empty($ciclo_1) && !empty($ae) &&!empty($terminal_anterior_ficticio) && !empty($ponta_a) && !empty($ponta_b)) 
 			   {
 				//Editar ou ATUALIZAR
-				$cad->atualizarDados($id_upd,$circuito,$velocidade,$valor_contrato,$numero_logico);
+				$cad->atualizarDados($id_upd,$circuito,$velocidade,$valor_contrato,$numero_logico,$chave_dd,$chave_caixa,$contrato_caixa,$contrato_oi,$observacao,$motivos_isentos,$acesso_associado,$oficio_solicitacao,$data_homologacao,$circuito_base_cliente,$numero_atividade,$cgc_filial,$gerenciado,$regiao,$site,$uf,$ciclo,$local_lit_local,$dia_vencimento,$dt_instalacao,$chavecpct,$ddd_codigo_regiao,$ccus,$produtos_dados_tipo_circuito,$designacao_dados,$degrau_tarif_degrau,$cnpj_titular,$tp_ccus,$data_retirada,$cnpj_usuario,$local_num,$categoria,$cj_nao_tem_rii,$situacao,$r_social_titular,$contrato,$su_nao_tem_RII, $agrupador,$ativo_inativo, $servicos, $descricao_produto_sisraf, $ae, $terminal_anterior_ficticio, $ponta_a,$ponta_b);
 				header("location: cad_form.php");
 
 				}
@@ -40,7 +87,7 @@ $cad = new Cad_form("base_oi","localhost","root","");
 			  			<h4>Preencha todos os campos !</h4>
 			  		</div>
 			  	
-			  		<?php 			
+			  		<?php			
 				}
 		}		
 
@@ -51,10 +98,56 @@ $cad = new Cad_form("base_oi","localhost","root","");
 			$velocidade = addslashes($_POST['velocidade']);
 			$valor_contrato = addslashes($_POST['valor_contrato']);
 			$numero_logico = addslashes($_POST['numero_logico']);
-			if(!empty($circuito) && !empty($velocidade) && !empty($valor_contrato) && !empty($numero_logico))
+			$chave_dd = addslashes($_POST['chave_dd']);
+			$chave_caixa = addslashes($_POST['chave_caixa']);
+			$contrato_caixa = addslashes($_POST['contrato_caixa']);
+			$contrato_oi = addslashes($_POST['contrato_oi']);
+			$observacao = addslashes($_POST['observacao']);
+			$motivos_isentos = addslashes($_POST['motivos_isentos']);
+			$acesso_associado = addslashes($_POST['acesso_associado']);
+			$oficio_solicitacao = addslashes($_POST['oficio_solicitacao']);
+			$data_homologacao = addslashes($_POST['data_homologacao']);
+			$circuito_base_cliente = addslashes($_POST['circuito_base_cliente']);
+			$numero_atividade = addslashes($_POST['numero_atividade']);
+			$cgc_filial = addslashes($_POST['cgc_filial']);
+			$gerenciado = addslashes($_POST['gerenciado']);
+			$regiao = addslashes($_POST['regiao']);
+			$site = addslashes($_POST['site']);
+			$uf = addslashes($_POST['uf']);
+			$ciclo = addslashes($_POST['ciclo']);
+			$local_lit_local = addslashes($_POST['local_lit_local']);
+			$dia_vencimento =  addslashes($_POST['dia_vencimento']);
+			$dt_instalacao = addslashes($_POST['dt_instalacao']);
+			$chavecpct = addslashes($_POST['chavecpct']);
+			$ddd_codigo_regiao = addslashes($_POST['ddd_codigo_regiao']);
+			$ccus = addslashes($_POST['ccus']);
+			$produtos_dados_tipo_circuito = addslashes($_POST['produtos_dados_tipo_circuito']);
+			$designacao_dados = addslashes($_POST['designacao_dados']);
+			$degrau_tarif_degrau = addslashes($_POST['degrau_tarif_degrau']);
+			$cnpj_titular = addslashes($_POST['cnpj_titular']);
+			$tp_ccus = addslashes($_POST['tp_ccus']);
+			$data_retirada = addslashes($_POST['data_retirada']);
+			$cnpj_usuario = addslashes($_POST['cnpj_usuario']);
+			$local_num = addslashes($_POST['local_num']);
+			$categoria = addslashes($_POST['categoria']);
+			$cj_nao_tem_rii = addslashes($_POST['cj_nao_tem_rii']);
+			$situacao = addslashes($_POST['situacao']);
+			$r_social_titular = addslashes($_POST['r_social_titular']);
+			$contrato = addslashes($_POST['contrato']);
+			$su_nao_tem_RII = addslashes($_POST['su_nao_tem_RII']);
+			$agrupador = addslashes($_POST['agrupador']);
+			$ativo_inativo = addslashes($_POST['ativo_inativo']);
+			$servicos = addslashes($_POST['servicos']);
+			$descricao_produto_sisraf = addslashes($_POST['descricao_produto_sisraf']);
+			$ciclo_1 = addslashes($_POST['ciclo_1']);
+			$ae = addslashes($_POST['ae']);
+			$terminal_anterior_ficticio    = addslashes($_POST['terminal_anterior_ficticio']);
+			$ponta_a = addslashes($_POST['ponta_a']);
+			$ponta_b = addslashes($_POST['ponta_b']);
+			if(!empty($circuito) && !empty($velocidade) && !empty($valor_contrato) && !empty($numero_logico) && !empty($chave_dd) && !empty($chave_caixa) && !empty($contrato_caixa) && !empty($contrato_oi) && !empty($observacao) && !empty($motivos_isentos) && !empty($acesso_associado) && !empty($oficio_solicitacao) && !empty($data_homologacao) && !empty($circuito_base_cliente) && !empty($numero_atividade) && !empty($cgc_filial) && !empty($gerenciado) && !empty($regiao) && !empty($site) && !empty($uf) && !empty($ciclo) && !empty($local_lit_local) && !empty($dia_vencimento) && !empty($dt_instalacao) && !empty($chavecpct) && !empty($ddd_codigo_regiao) && !empty($ccus) && !empty($produtos_dados_tipo_circuito) && !empty($designacao_dados) && !empty($degrau_tarif_degrau) && !empty($cnpj_usuario) && !empty($local_num) && !empty($categoria) && !empty($cj_nao_tem_rii) &&!empty($agrupador) && !empty($ativo_inativo) && !empty($servicos) && !empty($descricao_produto_sisraf) && !empty($ciclo_1) && !empty($ae) &&!empty($terminal_anterior_ficticio) && !empty($ponta_a) && !empty($ponta_b)) 
 			   {
 				//cadastrar
-				if(!$cad->cadastrarForm($circuito,$velocidade,$valor_contrato,$numero_logico))
+				if(!$cad->cadastrarForm($circuito,$velocidade,$valor_contrato,$numero_logico,$chave_dd,$chave_caixa,$contrato_caixa,$contrato_oi,$observacao,$motivos_isentos,$acesso_associado,$oficio_solicitacao,$data_homologacao,$circuito_base_cliente,$numero_atividade,$cgc_filial,$gerenciado,$regiao,$site,$uf,$ciclo,$local_lit_local,$dia_vencimento,$dt_instalacao,$chavecpct,$ddd_codigo_regiao,$ccus,$produtos_dados_tipo_circuito,$designacao_dados,$degrau_tarif_degrau,$cnpj_titular,$tp_ccus,$data_retirada,$cnpj_usuario,$local_num,$categoria,$cj_nao_tem_rii,$situacao,$r_social_titular,$contrato,$su_nao_tem_RII, $agrupador,$ativo_inativo, $servicos, $descricao_produto_sisraf, $ae, $terminal_anterior_ficticio, $ponta_a,$ponta_b))
 				{
 
 					?>
@@ -110,23 +203,20 @@ if(isset($_GET['id_up'])) //SE A PESSOA CLICOU EM EDITAR
 			<label for="valor_contrato">Valor de Contrato</label>
 			<input type="text" name="valor_contrato" id="valor_contrato" value="<?php if(isset($res)){echo $res['valor_contrato'];} ?>">
 			
-			<label for = "numero_logico">Numero Lógico</label>
+			<label for ="numero_logico">Numero Lógico</label>
 			<input type="text" name="numero_logico" id="numero_logico" value="<?php if(isset($res)){echo $res['numero_logico'];} ?>">
 
-			<label for = "chave_dd">Chave DDD</label>
+			<label for ="chave_dd">Chave DDD</label>
 			<input type="text" name="chave_dd" id="chave_dd" value="<?php if(isset($res)){echo $res['chave_dd'];} ?>"> 
 			
-			<label for = "chave_caixa">Chave Caixa</label>
+			<label for ="chave_caixa">Chave Caixa</label>
 			<input type="text" name="chave_caixa" id="chave_caixa" value="<?php if(isset($res)){echo $res['chave_caixa'];} ?>"> 
 
 			<label for = "contrato_caixa"> Contrato Caixa</label>
-			<input type="text" name="" id="contrato_caixa" value="<?php if(isset($res)){echo $res['contrato_caixa'];} ?>"> 
+			<input type="text" name="contrato_caixa" id="contrato_caixa" value="<?php if(isset($res)){echo $res['contrato_caixa'];} ?>"> 
 
 			<label for = "contrato_oi"> Contrato Oi </label>
 			<input type="text" name="contrato_oi" id="contrato_oi" value="<?php if(isset($res)){echo $res['contrato_oi'];} ?>"> 
-
-			<label for = "valor_contrato"> Valor Contrato </label>
-			<input type="text" name="valor_contrato" id="valor_contrato" value="<?php if(isset($res)){echo $res['valor_contrato'];} ?>"> 
 			
 			<label for = "observacao"> Observação </label>
 			<input type="text" name="observacao" id="observacao" value="<?php if(isset($res)){echo $res['observacao'];} ?>"> 
@@ -149,23 +239,36 @@ if(isset($_GET['id_up'])) //SE A PESSOA CLICOU EM EDITAR
 			<label for = "numero_atividade"> Número Atividade</label>
 			<input type="text" name="numero_atividade" id="numero_atividade" value="<?php if(isset($res)){echo $res['numero_atividade'];} ?>"> 
 
+			<label for = "cgc_filial"> Cgc Filial </label>
+			<input type="text" name="cgc_filial" id="cgc_filial" value="<?php if(isset($res)){echo $res['cgc_filial'];} ?>">
+
+			<label for = "gerenciado"> Gerenciado </label>
+			<input type="text" name="gerenciado" id="gerenciado" value="<?php if(isset($res)){echo $res['gerenciado'];} ?>">
+
+			<label for = "regiao">Regiao  </label>
+			<input type="text" name="regiao" id="regiao" value="<?php if(isset($res)){echo $res['regiao'];} ?>">
+
+			<label for = "site"> Site </label>
+			<input type="text" name="site" id="site" value="<?php if(isset($res)){echo $res['site'];} ?>">
+
 			<label for = "uf"> Uf </label>
-			<input type="text" name="uf" id="uf" value="<?php if(isset($res)){echo $res['uf'];} ?>"> 
+			<input type="text" name="uf" id="uf" value="<?php if(isset($res)){echo $res['uf'];} ?>">
+
 
 			<label for = "ciclo"> Ciclo</label>
 			<input type="text" name="ciclo" id="ciclo" value="<?php if(isset($res)){echo $res['ciclo'];} ?>"> 
 
 			<label for = "local_lit_local">Local Lit / LOCAL</label>
-			<input type="text" name="" id="local_lit_local" value="<?php if(isset($res)){echo $res['local_lit_local'];} ?>"> 
+			<input type="text" name="local_lit_local" id="local_lit_local" value="<?php if(isset($res)){echo $res['local_lit_local'];} ?>"> 
 
-			<label for = "dia_vencim"> Dia Vencimento</label>
-			<input type="text" name="dia_vencim" id="dia_vencim" value="<?php if(isset($res)){echo $res['dia_vencim'];} ?>"> 
+			<label for = "dia_vencimento"> Dia Vencimento</label>
+			<input type="text" name="dia_vencimento" id="dia_vencimento" value="<?php if(isset($res)){echo $res['dia_vencimento'];} ?>"> 
 
 			<label for = "dt_instalacao">DT INSTALAÇÃO</label>
 			<input type="text" name="dt_instalacao" id="dt_instalacao" value="<?php if(isset($res)){echo $res['dt_instalacao'];} ?>"> 
 
 			<label for = "chavecpct"> ChaveCPCT </label>
-			<input type="text" name="chavecpct	" id="chavecpct" value="<?php if(isset($res)){echo $res['chavecpct'];} ?>"> 
+			<input type="text" name="chavecpct" id="chavecpct" value="<?php if(isset($res)){echo $res['chavecpct'];} ?>"> 
 
 			<label for = "ddd_codigo_regiao">DDD / CODIGO REGIAO</label>
 			<input type="text" name="ddd_codigo_regiao" id="ddd_codigo_regiao" value="<?php if(isset($res)){echo $res['ddd_codigo_regiao'];} ?>"> 
@@ -255,7 +358,52 @@ if(isset($_GET['id_up'])) //SE A PESSOA CLICOU EM EDITAR
 				<td>CIRCUITO</td>
 				<td>VELOCIDADE</td>
 				<td>VALOR DO CONTRATO</td>
-				<td colspan="2">NÚMERO LOGICO</td>
+				<td >NÚMERO LOGICO</td>
+				<td>Chave DDD </td>
+				<td>Chave Caixa </td>
+				<td>Contrato Caixa </td>
+				<td>Contrato Oi </td>
+				<td>Valor Contrato</td>
+				<td>Observação</td>
+				<td>Motivo Isentos </td>
+				<td>Acesso Associado </td>
+				<td>Ofício de Solicitação </td>
+				<td>Data de Homologação </td>
+				<td>Circuito base Cliente</td>
+				<td>Número Atividade </td>
+				<td>Uf</td>
+				<td>Ciclo</td>
+				<td>Local Lit / LOCAL</td>
+				<td>Dia Vencimento</td>
+				<td>DT INSTALAÇÃO</td>
+				<td>ChaveCPCT</td>
+				<td>DDD / CODIGO REGIAO </td>
+				<td>CCUS </td>
+				<td>Produto DADOS / TIPO CIRCUITO </td>
+				<td>Designação de Dados </td>
+				<td>Degrau tarif / DEGRAU </td>
+				<td>CNPJ / CNPJ TITULAR </td>
+				<td>Tp CCUS </td>
+				<td>Data de Retirada </td>
+				<td>CNPJ USUARIO </td>
+				<td>Local Num </td>
+				<td>CATEGORIA </td>
+				<td>CJ não tem na RII </td>
+				<td>SITUAÇÃO </td>
+				<td>R Social Titular / TITULAR </td>
+				<td>CONTRATO </td>
+				<td>SU - não tem na RII </td>
+				<td>AGRUPADOR </td>
+				<td>Ativo Inativo </td>
+				<td>SERVIÇOS </td>
+				<td>Descrição Produto Sisraf </td>
+				<td>CICLO</td>
+				<td>AE </td>
+				<td>TERMINAL ANTERIOR / FICTICIO </td>
+				<td>PONTA A </td>
+				<td colspan="2">PONTA B </td>
+
+
 			</tr>
 		<?php 
 
